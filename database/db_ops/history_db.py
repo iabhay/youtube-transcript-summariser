@@ -17,7 +17,7 @@ class HistoryDB:
 
     def view_one_user_history(self):
         table_schema = ['Date', 'Url']
-        DBHelper.display_data(HistoryTableQuery.query_select_history,table_schema, (self.uid,))
+        DBHelper.display_data(HistoryTableQuery.query_select_history, table_schema, (self.uid,))
 
     def view_all_history(self):
         table_schema = ['Date','Username', 'URL']

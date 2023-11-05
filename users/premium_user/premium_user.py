@@ -1,57 +1,35 @@
-import random
-
-from transcript_handler.transcript_generator import transcriptor
-from summary_handler.summary_generator import Summariser
+from service_handler.transcript_handler.transcript_generator import transcriptor
+from service_handler.summary_handler.summary_generator import Summariser
 from database.db_ops.users_db import UsersDB
 from config.config import Config
-from content_checker.content_check import ContentChecker
+from service_handler.content_checker.content_check import ContentChecker
 from database.db_ops.ban_url_db import BanUrlDB
-from users.premium_user.premium_user_controller import PremiumUserController
+# from users.premium_user.premium_user_controller import PremiumUserController
 from database.db_ops.searches_db import SearchesDB
-from users.non_premium_user.non_premium_controller import NonPremiumUserController
+# from users.non_premium_user.non_premium_controller import NonPremiumUserController
+from utils.dicts import PremiumMap
+from users.submittedvideo.submitted_video_module import SubmittedVideoController
 class PremiumUser:
     def __init__(self, uid):
         self.uid = uid
         self.user = UsersDB(self.uid)
-        self.transcript_obj = transcriptor()
-        self.summary_obj = Summariser()
-        self.content_check_obj = ContentChecker()
-        self.ban_url_obj = BanUrlDB()
-        self.premium_obj = PremiumUserController(self.uid)
-        self.search_count_db = SearchesDB(self.uid)
-        self.non_premium_obj = NonPremiumUserController(self.uid)
-
+        self.premium_map = PremiumMap(uid)
+        self.premium_menu = self.premium_map.premium_menu()
+        self.submitted_video_obj = SubmittedVideoController(uid)
+    #
     def premium_module(self):
-        print(f"Premium Plan - Basic User")
+        print(Config.PREMIUM_USER_INTRO)
         while True:
             ask = int(input(Config.PREMIUM_PROMPT))
-            if ask == 6:
-                print("Exiting login Menu.!!")
-            if ask == 1:
-                res = self.submit_video()
-                if res == "Logout":
-                    print("You are banned")
-                elif res == "1":
-                    continue
-                elif res:
-                    self.non_premium_obj.non_premium_module()
-                else:
-                    print("Content is Blocked!")
-            elif 2 <= ask <= 4:
-                self.premium_obj.premium_controller(ask)
-            elif ask == 5:
-                self.downgrade_to_premium()
-                print("Please login again.")
+            if ask == int(Config.PREMIUM_PROMPT_LENGTH):
+                print(Config.EXITING_PROMPT)
                 break
-            elif ask == 6:
-                print(f"Exiting Menu!!")
-                break
+            elif 0 < ask <= len(self.premium_menu):
+                res = self.premium_menu[ask]()
+                if res:
+                    self.submitted_video_obj.submitted_video_module(res)
+                elif res == False:
+                    break
             else:
-                print("Please Select Carefully!")
+                print(Config.INVALID_INPUT_PROMPT)
 
-    def submit_video(self):
-        return self.non_premium_obj.submit_video(self.uid)
-    def downgrade_to_premium(self):
-        ask = int(input("Are you Sure?\n1. Yes\n2. No"))
-        if ask == 1:
-            self.user.update_user("role", "nonpremiumuser")

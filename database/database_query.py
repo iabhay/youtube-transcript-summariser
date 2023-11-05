@@ -4,7 +4,7 @@ class CreateTablesQuery:
     query_create_user_search = 'CREATE TABLE IF NOT EXISTS SEARCHES (sid text PRIMARY KEY, date_time text, uid text , search_count integer DEFAULT 0, FOREIGN KEY(uid) REFERENCES USERS(uid))'
     query_create_message = 'CREATE TABLE IF NOT EXISTS MESSAGES (mid text PRIMARY KEY, date_time text, uid text, description text, FOREIGN KEY(uid) REFERENCES USERS(uid))'
     query_create_history = 'CREATE TABLE IF NOT EXISTS HISTORY (hid text PRIMARY KEY, date_time text, uid text, url_id text, FOREIGN KEY(uid) REFERENCES USERS(uid))'
-    query_create_premium_listing = 'CREATE TABLE IF NOT EXISTS PREMIUMLISTINGS (pid text PRIMARY KEY, date_time text, uid text, url_id text UNIQUE, FOREIGN KEY(uid) REFERENCES USERS(uid))'
+    query_create_premium_listing = 'CREATE TABLE IF NOT EXISTS PREMIUMLISTINGS (pid text PRIMARY KEY, date_time text, uid text, url_id text, FOREIGN KEY(uid) REFERENCES USERS(uid))'
     query_create_ban_url = 'CREATE TABLE IF NOT EXISTS BANNEDURL (bid text PRIMARY KEY, url_id text UNIQUE, category text, severity_level integer)'
 
 class UsersTableQuery:
@@ -48,6 +48,7 @@ class PremiumListingTable:
     query_select_premium_listing_by_admin = 'SELECT PREMIUMLISTINGS.date_time, USERS.username, PREMIUMLISTINGS.url_id FROM USERS INNER JOIN PREMIUMLISTINGS ON USERS.uid = PREMIUMLISTINGS.uid WHERE USERS.uid=?'
     query_delete_premium_listing = 'DELETE FROM PREMIUMLISTINGS WHERE uid=?'
     query_select_all_premium_listing = 'SELECT PREMIUMLISTINGS.date_time, USERS.username, PREMIUMLISTINGS.url_id FROM PREMIUMLISTINGS INNER JOIN USERS ON USERS.uid=PREMIUMLISTINGS.uid'
+    query_select_premium_url_for_user = 'SELECT * FROM PREMIUMLISTINGS WHERE url_id=? and uid=?'
 
 class BannedUrlTable:
     query_insert_ban_url = 'INSERT INTO BANNEDURL (bid, url_id, category, severity_level) VALUES (?, ?, ?, ?)'

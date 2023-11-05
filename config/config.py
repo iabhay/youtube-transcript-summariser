@@ -11,47 +11,35 @@ class Config:
     Maintains all the config variables of the game
     """
     MAIN_PROMPT = None
+    MAIN_PROMPT_LENGTH = None
     ADMIN_PROMPT = None
+    ADMIN_PROMPT_LENGTH = None
     MESSAGES_VIEW_PROMPT = None
+    MESSAGES_VIEW_PROMPT_LENGTH = None
     MESSAGES_FILTER = None
+    MESSAGES_FILTER_LENGTH = None
     NON_PREMIUM_PROMPT = None
+    NON_PREMIUM_PROMPT_LENGTH = None
     LANGUAGE_PROMPT = None
     SECURE_PASSWORD_PROMPT = None
     SUBMIT_VIDEO_PROMPT = None
     AFTER_SUBMITTING_URL_PROMPT = None
+    AFTER_SUBMITTING_URL_PROMPT_LENGTH = None
     UPGRADE_TO_PREMIUM_PROMPT = None
+    UPGRADE_TO_PREMIUM_PROMPT_LENGTH = None
     PREMIUM_PROMPT = None
+    PREMIUM_PROMPT_LENGTH = None
     LANGUAGES = None
-    # ENTRY_STATEMENT: None
-    # EXITING_GAME: None
-    # MESSAGE_FOR_WRONG_INPUT: None
-    # ENTER_USERNAME: None
-    # ENTER_PASSWORD: None
-    # PASSWORD_VALIDATOR_PATTERN: None
-    # INVALID_PASSWORD: None
-    # REGISTRATION_SUCCESS_MESSAGE: None
-    # REGISTRATION_NOT_SUCCESSFUL: None
-    # ALREADY_REGISTERED: None
-    # INVALID_CREDENTIALS: None
-    # LOGIN_SUCCESS_MESSAGE: None
-    # EXIT_LOGIN_MENU: None
-    # WELCOME_ADMIN: None
-    # WELCOME_PLAYER: None
-    # WELCOME_SUPER_ADMIN: None
-    # GAME_STARTING: None
-    # HIGHSCORE_UPDATE_MESSAGE: None
-    # ROLE_CHANGED: None
-    # ADMIN_CREATED: None
-    # ENTER_PROMPT_TO_CHANGE_ROLE: None
-    # CONFIRMATION_PROMPT: None
-    # DELETED_SUCCESSFULLY: None
-    # QUESTION_ADDED: None
-    # QUESTION_DELETED: None
-    # QUESTION_UPDATED: None
-    # QUESTION_ID_NOT_FOUND: None
-    # ENTER_QUESTION_ID: None
-    # EXITING_ADMIN: None
-    # EXITING_SUPERADMIN: None
+    CONFIRM_PROMPT = None
+    CONFIRM_PROMPT_LENGTH = None
+    ADMIN_USERNAME = None
+    ADMIN_PASSWORD = None
+    PREMIUM_USER_INTRO = None
+    BASIC_USER_INTRO = None
+    INVALID_INPUT_PROMPT = None
+    EXITING_PROMPT = None
+    APP_INTRO = None
+    APP_OUTRO = None
     # query_create_question: None
     # query_insert_question: None
     # query_update_question: None
@@ -86,17 +74,35 @@ class Config:
         with open(FPATH, 'r') as f:
             data = yaml.safe_load(f)
             cls.MAIN_PROMPT = data['MAIN_PROMPT']
+            cls.MAIN_PROMPT_LENGTH = data['MAIN_PROMPT_LENGTH']
             cls.ADMIN_PROMPT = data['ADMIN_PROMPT']
+            cls.ADMIN_PROMPT_LENGTH = data['ADMIN_PROMPT_LENGTH']
             cls.NON_PREMIUM_PROMPT = data['NON_PREMIUM_PROMPT']
+            cls.NON_PREMIUM_PROMPT_LENGTH = data['NON_PREMIUM_PROMPT_LENGTH']
             cls.MESSAGES_VIEW_PROMPT = data['MESSAGES_VIEW_PROMPT']
+            cls.MESSAGES_VIEW_PROMPT_LENGTH = data['MESSAGES_VIEW_PROMPT_LENGTH']
             cls.SECURE_PASSWORD_PROMPT = data['SECURE_PASSWORD_PROMPT']
             cls.SUBMIT_VIDEO_PROMPT = data['SUBMIT_VIDEO_PROMPT']
             cls.UPGRADE_TO_PREMIUM_PROMPT = data['UPGRADE_TO_PREMIUM_PROMPT']
+            cls.UPGRADE_TO_PREMIUM_PROMPT_LENGTH = data['UPGRADE_TO_PREMIUM_PROMPT_LENGTH']
             cls.MESSAGES_FILTER = data['MESSAGES_FILTER']
+            cls.MESSAGES_FILTER_LENGTH = data['MESSAGES_FILTER_LENGTH']
             cls.LANGUAGE_PROMPT = data['LANGUAGE_PROMPT']
             cls.AFTER_SUBMITTING_URL_PROMPT = data['AFTER_SUBMITTING_URL']
+            cls.AFTER_SUBMITTING_URL_PROMPT_LENGTH = data['AFTER_SUBMITTING_URL_LENGTH']
             cls.PREMIUM_PROMPT = data['PREMIUM_PROMPT']
+            cls.PREMIUM_PROMPT_LENGTH = data['PREMIUM_PROMPT_LENGTH']
             cls.LANGUAGES = data['LANGUAGES']
+            cls.CONFIRM_PROMPT = data['CONFIRM_PROMPT']
+            cls.CONFIRM_PROMPT_LENGTH = data['CONFIRM_PROMPT_LENGTH']
+            cls.ADMIN_USERNAME = data['ADMIN_USERNAME']
+            cls.ADMIN_PASSWORD = data['ADMIN_PASSWORD']
+            cls.PREMIUM_USER_INTRO = data['PREMIUM_USER_INTRO']
+            cls.BASIC_USER_INTRO = data['BASIC_USER_INTRO']
+            cls.INVALID_INPUT_PROMPT = data['INVALID_INPUT_PROMPT']
+            cls.EXITING_PROMPT = data['EXITING_PROMPT']
+            cls.APP_INTRO = data['APP_INTRO']
+            cls.APP_OUTRO = data['APP_OUTRO']
         # with open(GENERALCONFIGPATH, 'r') as f:
         #     data = yaml.safe_load(f)
         #     cls.ENTRY_STATEMENT = data['ENTRY_STATEMENT']

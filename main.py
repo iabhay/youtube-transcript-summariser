@@ -1,35 +1,35 @@
-# from summary_handler.summary_generator import summarise
-from register.register import Register
-from login.login import Login
+# from utils.dicts import AuthMAP
 from config.config import Config
 from database.db_ops.db_initialise import DBInitialise
+from utils.exception_handler import handle_exceptions
+from authenticator.login.login import Login
+from authenticator.register.register import Register
 
 class YTTS:
     def __init__(self):
-        self.register = Register()
-        self.login = Login()
-        # obj = summarise()
-        # obj.analyze_text()
+        register = Register()
+        login = Login()
+        self.auth_dict = {
+            1: register.register_module,
+            2: login.login_module
+        }
 
+    @handle_exceptions()
     def menu(self):
-        print("Transcriptor  : Smart Video, Simply Summarised!!")
-        ask = int(input(Config.MAIN_PROMPT))
-        if 1 > ask or ask > 2:
-            print("Bye! Thanks for using.")
-        while 0 < ask < 3:
-            if ask == 1:
-                self.register.register_module()
-            elif ask == 2:
-                self.login.login_module()
-            else:
-                print("Please Select Carefully!")
+        print(Config.APP_INTRO)
+        while True:
             ask = int(input(Config.MAIN_PROMPT))
-            if ask == 3:
-                print("Bye! Thanks for using.")
+            n = int(Config.MAIN_PROMPT_LENGTH)
+            if ask == n:
+                print(Config.APP_OUTRO)
+                break
+            elif 0 < ask <= len(self.auth_dict):
+                self.auth_dict[ask]()
+            else:
+                print(Config.INVALID_INPUT_PROMPT)
 
 
 if __name__ == "__main__":
-    # Config = Config.load()
     Config.load()
     DBInitialise.create_all_tables()
     ytts_obj = YTTS()

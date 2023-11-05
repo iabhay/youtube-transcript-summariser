@@ -1,10 +1,8 @@
-from config.config import Config
-from database.db_ops.db_helper import DBHelper
 from database.db_ops.messages_db import MessageDB
-from database.database_query import AdminQueries, UsersTableQuery
+from database.database_query import AdminQueries
 from database.db_ops.users_db import UsersDB
 from database.db_ops.ban_url_db import BanUrlDB
-from transcript_handler.transcript_generator import transcriptor
+from service_handler.transcript_handler.transcript_generator import transcriptor
 from database.db_ops.premium_listing_db import PremiumListingsDB
 from database.db_ops.db_helper import DBHelper
 from database.database_query import UsersTableQuery
@@ -17,7 +15,7 @@ class AdminController:
         self.msg_obj = MessageDB(self.uid)
         self.ban_url_obj = BanUrlDB()
         self.trancriptor = transcriptor()
-        self.premium_listing_obj = PremiumListingsDB(self.uid)
+        # self.premium_listing_obj = PremiumListingsDB(self.uid)
     def view_user(self):
         username = input("Enter username: ")
         valid = self.uid_generator(username)
@@ -25,10 +23,10 @@ class AdminController:
             print("No such User found")
         else:
             target_uid = valid[0]
-            table_schema = ['Uid', 'Username', 'Registered on', 'Role', 'Ban Status', 'Date', 'Today Search Count']
+            table_schema = ['Uid', 'Username', 'Registered on', 'Role', 'Ban Status', 'Date of banned searches', 'Today Banned Search Count']
             DBHelper.display_data(AdminQueries.query_view_user, table_schema, (target_uid,))
     def view_all_users(self):
-        table_schema = ['Uid', 'Username', 'Registered on', 'Role', 'Ban Status', 'Date', 'Today Search Count']
+        table_schema = ['Uid', 'Username', 'Registered on', 'Role', 'Ban Status', 'Date of banned searches', 'Today banned Search Count']
         DBHelper.display_data(AdminQueries.query_view_all_users, table_schema)
     def downgrade_premium_user(self):
         username = input("Enter username: ")
@@ -39,6 +37,8 @@ class AdminController:
             target_uid = valid[0]
             user_obj = UsersDB(target_uid)
             user_obj.update_user("role", "nonpremiumuser")
+            print("User downgraded")
+
     def ban_user(self):
         username = input("Enter username: ")
         valid = self.uid_generator(username)
@@ -48,6 +48,8 @@ class AdminController:
             target_uid = valid[0]
             user_obj = UsersDB(target_uid)
             user_obj.update_user("ban_status", "banned")
+            print("User banned")
+
     def unban_user(self):
         username = input("Enter username: ")
         valid = self.uid_generator(username)
@@ -57,10 +59,12 @@ class AdminController:
             target_uid = valid[0]
             user_obj = UsersDB(target_uid)
             user_obj.update_user("ban_status", "unbanned")
+            print("User unbanned")
     def ban_url(self):
         ask = input("Enter URL : ")
         urlid = self.trancriptor.extract_video_id(ask)
         self.ban_url_obj.save_ban_url(urlid, "Admin", "5")
+        print("Url unbanned")
 
     def unban_url(self):
         ask = input("Enter URL : ")
@@ -68,6 +72,7 @@ class AdminController:
         entry = self.ban_url_obj.view_ban_url(urlid)
         if entry:
             self.ban_url_obj.delete_ban_url(urlid)
+            print("Url unbanned")
         else:
             print("No Such Banned URL Found")
 
@@ -78,9 +83,14 @@ class AdminController:
         if valid:
             target_uid = valid[0]
             urlid = self.trancriptor.extract_video_id(ask)
-            entry = self.ban_url_obj.view_ban_url(urlid)
+            entry = self.ban_url_obj.fetch_ban_url(urlid)
+            premium_listing_obj = PremiumListingsDB(target_uid)
             if entry:
-                self.premium_listing_obj.remove_premium_listing(target_uid)
+                if entry[0][2] > 5:
+                    print(f"Can't be unbanned.\nReason Category - {entry[0][1]}\nSeverity Level(Greater than 5) - {entry[0][2]}")
+                else:
+                    premium_listing_obj.save_premium_url(ask)
+                    print(f"Premium Listing done for {username}")
             else:
                 print("No Such Banned URL Found")
         else:

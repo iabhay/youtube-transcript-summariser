@@ -1,18 +1,19 @@
 MAIN_PROMPT: |
-  1. : Register
-  2. : Login
-  3. : Quit
+  1. Register
+  2. Login
+  3. Quit
   Enter Choice:
+MAIN_PROMPT_LENGTH: 3
 ADMIN_PROMPT: |
-  1. View User
-  2. View All Users
-  3. Downgrade Premium User
-  4. Ban User
-  5. Unban User
-  6. Ban URL
-  7. Unban URL
-  8. Unban URL for Premium User
-  9. Messages from Users
+  1.  View User
+  2.  View All Users
+  3.  Downgrade Premium User
+  4.  Ban User
+  5.  Unban User
+  6.  Ban URL
+  7.  Unban URL
+  8.  Unban URL for Premium User
+  9.  Messages from Users
   10. View History of User
   11. View all History
   12. View Premium Listing of user
@@ -21,6 +22,7 @@ ADMIN_PROMPT: |
   15. Show ban url
   16. Exit
   Enter Choice:
+ADMIN_PROMPT_LENGTH: 16
 MESSAGES_VIEW_PROMPT: |
   VIEWS-
   1. From Premium Users
@@ -29,32 +31,34 @@ MESSAGES_VIEW_PROMPT: |
   4. All Messages
   5. Back
   Enter Choice:
+MESSAGES_VIEW_PROMPT_LENGTH: 5
 MESSAGES_FILTER: |
   1. Old First
   2. Latest
   Enter Choice:
+MESSAGES_FILTER_LENGTH: 2
 NON_PREMIUM_PROMPT: |
   Press:
-  1 : Submit Video Link 
-  2 : Upgrade to Premium
-  3 : Logout
-  Your choice:
+  1. Submit Video Link 
+  2. Upgrade to Premium
+  3. Logout
+  Enter choice:
+NON_PREMIUM_PROMPT_LENGTH: 3
 PREMIUM_PROMPT: |
   Press
-  1 : Submit Video Link 
-  2 : Request Your Language
-  3 : Premium Listing of Banned URL
-  4 : View My History
-  5 : Cancel Subscription
-  6 : Logout
-    Your choice:
+  1. Submit Video Link 
+  2. Request Your Language
+  3. Premium Listing of Banned URL
+  4. View My History
+  5. Cancel Subscription
+  6. Logout
+  Enter choice:
+PREMIUM_PROMPT_LENGTH: 6
 SECURE_PASSWORD_PROMPT: |
   Your password must contain:
-  1. Minimum eight characters, 
-  2. at least one uppercase letter,
-  3. one lowercase letter and one number
+  Min. 8 length, one uppercase letter, one lowercase letter and one number
   Enter Choice:
-SUBMIT_VIDEO_PROMPT: Enter URL (Max Video Length - 8 mins and Language - English) or Press 1 to back -
+SUBMIT_VIDEO_PROMPT: Enter URL (Language - English) or Press 1 to back -
 LANGUAGE_PROMPT: Enter Language for Summary -
 AFTER_SUBMITTING_URL: |
   1. Save Summary
@@ -62,11 +66,19 @@ AFTER_SUBMITTING_URL: |
   3. Show Video Details
   4. Exit
   Enter Choice:
+AFTER_SUBMITTING_URL_LENGTH: 4
 UPGRADE_TO_PREMIUM_PROMPT: |
   Plan - Rs. 59 per month
   1. Pay
   2. Back
   Enter Choice:
+UPGRADE_TO_PREMIUM_PROMPT_LENGTH: 2
+BASIC_USER_INTRO: Current Plan -> Basic User
+PREMIUM_USER_INTRO: Current Plan -> Premium User
+INVALID_INPUT_PROMPT: Please Select Carefully!
+EXITING_PROMPT: Exiting...
+APP_INTRO: 'Transcriptor :-> Smart Video, Simply Summarised!!'
+APP_OUTRO: Bye! Thanks for using.
 LANGUAGES: |
   LANG CODE - af       , LANGUAGE -   Afrikaans
   LANG CODE - ak       , LANGUAGE -   Akan
@@ -218,3 +230,11 @@ LANGUAGES: |
   LANG CODE - yo       , LANGUAGE -   Yoruba
   LANG CODE - zu       , LANGUAGE -   Zulu
   Enter Lang Code :
+CONFIRM_PROMPT: |
+  Are you Sure?
+  1. Yes
+  2. No 
+  Enter Choice:
+CONFIRM_PROMPT_LENGTH: 2
+ADMIN_USERNAME : admin
+ADMIN_PASSWORD : '@Admin1234'
