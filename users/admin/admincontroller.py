@@ -15,7 +15,7 @@ class AdminController:
         self.msg_obj = MessageDB(self.uid)
         self.ban_url_obj = BanUrlDB()
         self.trancriptor = transcriptor()
-        # self.premium_listing_obj = PremiumListingsDB(self.uid)
+
     def view_user(self):
         username = input("Enter username: ")
         valid = self.uid_generator(username)
@@ -25,9 +25,11 @@ class AdminController:
             target_uid = valid[0]
             table_schema = ['Uid', 'Username', 'Registered on', 'Role', 'Ban Status', 'Date of banned searches', 'Today Banned Search Count']
             DBHelper.display_data(AdminQueries.query_view_user, table_schema, (target_uid,))
+
     def view_all_users(self):
         table_schema = ['Uid', 'Username', 'Registered on', 'Role', 'Ban Status', 'Date of banned searches', 'Today banned Search Count']
         DBHelper.display_data(AdminQueries.query_view_all_users, table_schema)
+
     def downgrade_premium_user(self):
         username = input("Enter username: ")
         valid = self.uid_generator(username)
@@ -60,6 +62,7 @@ class AdminController:
             user_obj = UsersDB(target_uid)
             user_obj.update_user("ban_status", "unbanned")
             print("User unbanned")
+
     def ban_url(self):
         ask = input("Enter URL : ")
         urlid = self.trancriptor.extract_video_id(ask)
@@ -95,33 +98,19 @@ class AdminController:
                 print("No Such Banned URL Found")
         else:
             print("No Such User Found")
+
     def message_from_user(self):
         username = input("Enter username: ")
         self.msg_obj.view_one_message(username)
+
     def messages_from_non_premium_users(self):
-        # choice = self.message_filter()
-        # if choice == 0:
-        #     pass
-        # elif choice == 1:
-        #     pass
         self.msg_obj.view_non_premium_messages()
+
     def messages_from_premium_users(self):
-        # choice = self.message_filter()
-        # if choice == 0:
-        #     pass
-        # elif choice == 1:
-        #     pass
         self.msg_obj.view_premium_messages()
+
     def view_all_messages(self):
-        # choice = self.message_filter()
-        # if choice == 0:
-        #     pass
-        # elif choice == 1:
-        #     pass
         self.msg_obj.view_all_messages()
-    # def message_filter(self):
-    #     ask = int(input(Config.MESSAGES_FILTER))
-    #     pass
 
     def uid_generator(self, username):
         target = DBHelper.fetch_data(UsersTableQuery.query_select_user_by_admin, (username,))

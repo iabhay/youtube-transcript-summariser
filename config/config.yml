@@ -50,8 +50,9 @@ PREMIUM_PROMPT: |
   2. Request Your Language
   3. Premium Listing of Banned URL
   4. View My History
-  5. Cancel Subscription
-  6. Logout
+  5. View my premium listing
+  6. Cancel Subscription
+  7. Logout
   Enter choice:
 PREMIUM_PROMPT_LENGTH: 6
 SECURE_PASSWORD_PROMPT: |

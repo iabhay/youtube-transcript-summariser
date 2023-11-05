@@ -21,7 +21,6 @@ class transcriptor:
             transcript = YouTubeTranscriptApi.get_transcript(video_id)
             return transcript
         except Exception as e:
-            # print(f"Error: {e}")
             return None
 
     def format_transcript(self, video_id):
@@ -29,7 +28,7 @@ class transcriptor:
         transcript = self.get_transcript(video_id)
         if transcript:
             formatted_transcript = ""
-            wrapper = textwrap.TextWrapper(width=120)
+            wrapper = textwrap.TextWrapper(width=200)
             for entry in transcript:
                 wrapped_text = wrapper.fill(text=entry['text'])
                 res.append(wrapped_text)

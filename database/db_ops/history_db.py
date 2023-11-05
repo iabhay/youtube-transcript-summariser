@@ -11,9 +11,9 @@ class HistoryDB:
         self.dt_string = tm.strftime("%d/%m/%Y %H:%M:%S")
 
     def save_history(self, urlid):
-        hid = "M" + ShortUUID("123456789").random(length=4)
+        hid = "H" + ShortUUID("123456789").random(length=4)
         DBHelper.save_data(HistoryTableQuery.query_insert_history, (hid, self.dt_string, self.uid, urlid))
-
+        return hid
 
     def view_one_user_history(self):
         table_schema = ['Date', 'Url']

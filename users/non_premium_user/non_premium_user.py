@@ -1,9 +1,9 @@
 from database.db_ops.users_db import UsersDB
 from config.config import Config
-from users.premium_user.premium_user import PremiumUser
+# from users.premium_user.premium_user import PremiumUser
 from utils.dicts import NonPremiumMap
 from users.submittedvideo.submitted_video_module import SubmittedVideoController
-
+from users.premium_user.premium_user import PremiumUser
 
 class NonPremiumUser:
     def __init__(self, uid):
@@ -26,8 +26,11 @@ class NonPremiumUser:
             elif 0 < ask <= len(self.non_premium_menu):
                 res = self.non_premium_menu[ask]()
                 if res:
-                    self.submitted_video_obj.submitted_video_module(res)
+                    self.submitted_video_obj.submitted_video_module(res[0], res[1], res[2])
                 elif res == False:
+                    if ask == 2:
+                        return "nonpremium"
                     break
             else:
                 print(Config.INVALID_INPUT_PROMPT)
+            return None

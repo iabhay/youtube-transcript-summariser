@@ -1,7 +1,6 @@
 from config.config import Config
 from database.db_ops.users_db import UsersDB
 
-
 class UsersHelper:
     def __init__(self, uid):
         self.user = UsersDB(uid)
@@ -21,3 +20,4 @@ class UsersHelper:
             self.user.update_user("role", "nonpremiumuser")
             print("You are downgraded!!")
             # self.non_premium_obj.non_premium_module()
+        return False

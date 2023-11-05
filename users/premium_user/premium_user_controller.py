@@ -15,14 +15,18 @@ class PremiumUserController:
             ask = ask + ", Url for premium listing -> " + url
         self.msg_obj.save_message(ask)
         print("Message sent successfully.")
+        return None
 
     def premium_listing_of_banned_url(self):
         url = input("Enter URL for premium listing: ")
         self.send_message_to_admin(url)
         print("Once approved by admin, it'll be added to your premium listing.")
+        return None
 
     def view_my_premium_listing(self):
         self.premium_obj.view_premium_user_listing()
+        return None
 
     def view_my_history(self):
         self.history_obj.view_one_user_history()
+        return None
