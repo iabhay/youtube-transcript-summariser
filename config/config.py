@@ -42,6 +42,7 @@ class Config:
     NO_USER_FOUND = None
     NO_URL_FOUND = None
     PROCESSING_PROMPT = None
+    SECURE_USERNAME_PROMPT = None
 
     @classmethod
     def load(cls):
@@ -83,3 +84,4 @@ class Config:
             cls.NO_USER_FOUND = data['NO_USER_FOUND']
             cls.NO_URL_FOUND = data['NO_URL_FOUND']
             cls.PROCESSING_PROMPT = data['PROCESSING_PROMPT']
+            cls.SECURE_USERNAME_PROMPT = data['SECURE_USERNAME_PROMPT']

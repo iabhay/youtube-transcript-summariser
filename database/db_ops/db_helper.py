@@ -1,5 +1,8 @@
 from prettytable import PrettyTable
 from database.database_connection import DatabaseConnection
+import logging
+from config.log_config.log_config import LogStatements
+logger = logging.getLogger('db_helper')
 YTTSDB = "YTTSDB.db"
 
 class DBHelper:

@@ -1,0 +1,272 @@
+2023-11-06 13:26:27,418 INFO     [main.py:24] Starting with Youtube Transcript Summariser.
+2023-11-06 13:26:54,003 INFO     [main.py:24] Starting with Youtube Transcript Summariser.
+2023-11-06 13:27:26,296 INFO     [main.py:24] Starting with Youtube Transcript Summariser.
+2023-11-06 13:28:57,079 INFO     [main.py:24] Starting with Youtube Transcript Summariser.
+2023-11-06 14:08:04,290 INFO     [main.py:24] Starting with Youtube Transcript Summariser.
+2023-11-06 14:08:18,179 INFO     [history_db.py:19] User history saved in DB
+2023-11-06 14:09:26,397 INFO     [main.py:24] Starting with Youtube Transcript Summariser.
+2023-11-06 14:10:35,017 INFO     [history_db.py:19] User history saved in DB
+2023-11-06 14:11:57,041 INFO     [main.py:24] Starting with Youtube Transcript Summariser.
+2023-11-06 14:12:22,978 INFO     [history_db.py:19] User history saved in DB
+2023-11-06 14:13:05,752 INFO     [main.py:24] Starting with Youtube Transcript Summariser.
+2023-11-06 14:13:18,890 INFO     [history_db.py:19] User history saved in DB
+2023-11-06 14:13:18,890 INFO     [exception_handler.py:29] 
+2023-11-06 14:13:18,900 DEBUG    [connectionpool.py:1048] Starting new HTTPS connection (1): www.youtube.com:443
+2023-11-06 14:13:21,049 DEBUG    [connectionpool.py:546] https://www.youtube.com:443 "GET /watch?v=n62M2pd0-p8 HTTP/1.1" 200 None
+2023-11-06 14:13:22,077 DEBUG    [connectionpool.py:1048] Starting new HTTPS connection (1): www.youtube.com:443
+2023-11-06 14:13:23,671 DEBUG    [connectionpool.py:546] https://www.youtube.com:443 "GET /api/timedtext?v=n62M2pd0-p8&ei=KKdIZeaiNdyb_9EPmamggAU&caps=asr&opi=112496729&xoaf=4&hl=en&ip=0.0.0.0&ipbits=0&expire=1699285400&sparams=ip,ipbits,expire,v,ei,caps,opi,xoaf&signature=4DBAA67CC5ABEC8459CCEC172EAA11C78DC5264A.7631F653A765A166A2B9258E2410AD43E74C4EB1&key=yt8&kind=asr&lang=en HTTP/1.1" 200 None
+2023-11-06 14:13:23,783 DEBUG    [selector_events.py:54] Using selector: SelectSelector
+2023-11-06 14:14:15,981 INFO     [main.py:24] Starting with Youtube Transcript Summariser.
+2023-11-06 14:14:28,965 INFO     [history_db.py:19] User history saved in DB
+2023-11-06 14:14:28,965 INFO     [exception_handler.py:29] 
+2023-11-06 14:14:28,965 DEBUG    [connectionpool.py:1048] Starting new HTTPS connection (1): www.youtube.com:443
+2023-11-06 14:14:31,017 DEBUG    [connectionpool.py:546] https://www.youtube.com:443 "GET /watch?v=n62M2pd0-p8 HTTP/1.1" 200 None
+2023-11-06 14:14:32,298 DEBUG    [connectionpool.py:1048] Starting new HTTPS connection (1): www.youtube.com:443
+2023-11-06 14:14:33,889 DEBUG    [connectionpool.py:546] https://www.youtube.com:443 "GET /api/timedtext?v=n62M2pd0-p8&ei=bqdIZfXMM4Ge_9EPz5ymuAo&caps=asr&opi=112496729&xoaf=4&hl=en&ip=0.0.0.0&ipbits=0&expire=1699285470&sparams=ip,ipbits,expire,v,ei,caps,opi,xoaf&signature=DCAEBC6D1D62F495EB41078F2A0E283ED0FF2E6E.439376CD3A3F1C6A2BF0FE7DE6713720A4197632&key=yt8&kind=asr&lang=en HTTP/1.1" 200 None
+2023-11-06 14:14:34,032 DEBUG    [selector_events.py:54] Using selector: SelectSelector
+2023-11-06 14:15:01,642 INFO     [submit_video_ops.py:79] Summary file generated
+2023-11-06 14:15:03,092 INFO     [submit_video_ops.py:85] Transcript file generated
+2023-11-06 14:15:21,106 INFO     [messages_db.py:27] Message sent to DB
+2023-11-06 14:15:21,106 INFO     [premium_user_controller.py:26] Premium user requested message
+2023-11-06 14:18:47,647 INFO     [main.py:24] Starting with Youtube Transcript Summariser.
+2023-11-06 14:18:53,941 INFO     [login.py:48] Invalid login occurred
+2023-11-06 14:21:12,201 INFO     [main.py:24] Starting with Youtube Transcript Summariser.
+2023-11-06 14:21:23,840 INFO     [main.py:24] Starting with Youtube Transcript Summariser.
+2023-11-06 14:21:32,208 INFO     [users_db.py:24] User created and inserted to DB
+2023-11-06 14:22:19,249 INFO     [main.py:24] Starting with Youtube Transcript Summariser.
+2023-11-06 14:27:38,822 INFO     [main.py:24] Starting with Youtube Transcript Summariser.
+2023-11-06 14:28:21,132 INFO     [main.py:24] Starting with Youtube Transcript Summariser.
+2023-11-06 14:29:34,947 INFO     [users_db.py:24] User created and inserted to DB
+2023-11-06 14:29:52,453 INFO     [login.py:48] Invalid login occurred
+2023-11-06 14:30:46,010 INFO     [history_db.py:19] User history saved in DB
+2023-11-06 14:30:46,010 INFO     [exception_handler.py:29] 
+2023-11-06 14:30:46,010 DEBUG    [connectionpool.py:1048] Starting new HTTPS connection (1): www.youtube.com:443
+2023-11-06 14:30:49,666 DEBUG    [connectionpool.py:546] https://www.youtube.com:443 "GET /watch?v=DBOgQMcp_TY HTTP/1.1" 200 None
+2023-11-06 14:30:50,713 DEBUG    [connectionpool.py:1048] Starting new HTTPS connection (1): www.youtube.com:443
+2023-11-06 14:30:52,354 DEBUG    [connectionpool.py:546] https://www.youtube.com:443 "GET /api/timedtext?v=DBOgQMcp_TY&ei=QatIZezsHdap_9EP0I2B0Ao&caps=asr&opi=112496729&xoaf=5&hl=en&ip=0.0.0.0&ipbits=0&expire=1699286449&sparams=ip,ipbits,expire,v,ei,caps,opi,xoaf&signature=2040B88C9973141A7CDEE0E374B21C04AFFE5180.4C33B97383945EE4D7143385677B8E19DA71DB8C&key=yt8&kind=asr&lang=en HTTP/1.1" 200 None
+2023-11-06 14:30:52,402 DEBUG    [selector_events.py:54] Using selector: SelectSelector
+2023-11-06 14:31:10,413 INFO     [submit_video_ops.py:79] Summary file generated
+2023-11-06 14:31:11,077 INFO     [submit_video_ops.py:85] Transcript file generated
+2023-11-06 14:31:12,995 INFO     [login.py:77] User exited from app
+2023-11-06 14:32:09,519 INFO     [main.py:24] Starting with Youtube Transcript Summariser.
+2023-11-06 14:32:20,224 INFO     [history_db.py:19] User history saved in DB
+2023-11-06 14:32:20,224 INFO     [exception_handler.py:29] 
+2023-11-06 14:32:20,224 DEBUG    [connectionpool.py:1048] Starting new HTTPS connection (1): www.youtube.com:443
+2023-11-06 14:32:21,936 DEBUG    [connectionpool.py:546] https://www.youtube.com:443 "GET /watch?v=DBOgQMcp_TY HTTP/1.1" 200 None
+2023-11-06 14:32:22,961 DEBUG    [connectionpool.py:1048] Starting new HTTPS connection (1): www.youtube.com:443
+2023-11-06 14:32:24,553 DEBUG    [connectionpool.py:546] https://www.youtube.com:443 "GET /api/timedtext?v=DBOgQMcp_TY&ei=natIZbWWL6yU_9EPtbmA6A4&caps=asr&opi=112496729&xoaf=5&hl=en&ip=0.0.0.0&ipbits=0&expire=1699286541&sparams=ip,ipbits,expire,v,ei,caps,opi,xoaf&signature=603307251079D2047576E065F880E7907C2FD8C8.CD717766AFED069633350168B9F472B655342D42&key=yt8&kind=asr&lang=en HTTP/1.1" 200 None
+2023-11-06 14:32:24,601 DEBUG    [selector_events.py:54] Using selector: SelectSelector
+2023-11-06 14:32:48,670 INFO     [non_premium_user.py:43] User upgraded to premium
+2023-11-06 14:33:56,348 INFO     [premium_user.py:27] Premium user logged out
+2023-11-06 14:33:56,348 INFO     [login.py:77] User exited from app
+2023-11-06 14:34:10,157 INFO     [main.py:24] Starting with Youtube Transcript Summariser.
+2023-11-06 14:35:18,308 INFO     [main.py:24] Starting with Youtube Transcript Summariser.
+2023-11-06 14:35:31,263 INFO     [login.py:77] User exited from app
+2023-11-06 14:36:28,551 INFO     [main.py:24] Starting with Youtube Transcript Summariser.
+2023-11-06 14:37:19,809 INFO     [users_db.py:41] User updated and changes done in DB
+2023-11-06 14:37:19,809 INFO     [users_helper.py:19] User upgraded to premium
+2023-11-06 14:40:21,069 INFO     [main.py:24] Starting with Youtube Transcript Summariser.
+2023-11-06 14:40:34,529 INFO     [premium_user.py:27] Premium user logged out
+2023-11-06 14:40:34,529 INFO     [login.py:77] User exited from app
+2023-11-06 14:43:08,860 INFO     [main.py:24] Starting with Youtube Transcript Summariser.
+2023-11-06 14:43:24,383 INFO     [premium_user.py:27] Premium user logged out
+2023-11-06 14:43:24,383 INFO     [login.py:77] User exited from app
+2023-11-06 14:45:59,760 INFO     [main.py:24] Starting with Youtube Transcript Summariser.
+2023-11-06 14:46:11,824 INFO     [users_db.py:41] User updated and changes done in DB
+2023-11-06 14:46:11,824 INFO     [users_helper.py:36] User downgraded to non-premium
+2023-11-06 14:46:11,824 INFO     [premium_user.py:40] User downgraded to non-premium
+2023-11-06 14:46:15,630 INFO     [users_db.py:41] User updated and changes done in DB
+2023-11-06 14:46:15,630 INFO     [users_helper.py:19] User upgraded to premium
+2023-11-06 14:46:15,630 INFO     [non_premium_user.py:43] User upgraded to premium
+2023-11-06 14:46:18,122 INFO     [premium_user.py:27] Premium user logged out
+2023-11-06 14:46:18,122 INFO     [login.py:77] User exited from app
+2023-11-06 14:46:25,081 INFO     [login.py:48] Invalid login occurred
+2023-11-06 14:47:01,648 INFO     [premium_user.py:27] Premium user logged out
+2023-11-06 14:47:01,648 INFO     [login.py:77] User exited from app
+2023-11-06 14:47:35,755 INFO     [users_db.py:41] User updated and changes done in DB
+2023-11-06 14:47:35,755 INFO     [admincontroller.py:51] Admin downgraded user
+2023-11-06 14:48:29,244 INFO     [exception_handler.py:29] 
+2023-11-06 15:05:03,336 INFO     [main.py:24] Starting with Youtube Transcript Summariser.
+2023-11-06 15:06:14,077 INFO     [users_db.py:24] User created and inserted to DB
+2023-11-06 15:06:35,306 INFO     [users_db.py:41] User updated and changes done in DB
+2023-11-06 15:06:35,306 INFO     [users_helper.py:19] User upgraded to premium
+2023-11-06 15:06:35,306 INFO     [non_premium_user.py:43] User upgraded to premium
+2023-11-06 15:07:30,044 INFO     [history_db.py:19] User history saved in DB
+2023-11-06 15:07:30,044 INFO     [exception_handler.py:29] 
+2023-11-06 15:07:30,044 DEBUG    [connectionpool.py:1048] Starting new HTTPS connection (1): www.youtube.com:443
+2023-11-06 15:07:32,199 DEBUG    [connectionpool.py:546] https://www.youtube.com:443 "GET /watch?v=n62M2pd0-p8 HTTP/1.1" 200 None
+2023-11-06 15:07:33,200 DEBUG    [connectionpool.py:1048] Starting new HTTPS connection (1): www.youtube.com:443
+2023-11-06 15:07:34,804 DEBUG    [connectionpool.py:546] https://www.youtube.com:443 "GET /api/timedtext?v=n62M2pd0-p8&ei=3LNIZbX2Aaqn_9EPv5zEyAs&caps=asr&opi=112496729&xoaf=4&hl=en&ip=0.0.0.0&ipbits=0&expire=1699288652&sparams=ip,ipbits,expire,v,ei,caps,opi,xoaf&signature=BB6ACB9952374BBB923F269EB147DC6B9159FAA3.15EC56B944EEEE5BACFFCB9F50E2DBE01C360484&key=yt8&kind=asr&lang=en HTTP/1.1" 200 None
+2023-11-06 15:07:59,621 INFO     [history_db.py:19] User history saved in DB
+2023-11-06 15:07:59,621 INFO     [exception_handler.py:29] 
+2023-11-06 15:07:59,621 DEBUG    [connectionpool.py:1048] Starting new HTTPS connection (1): www.youtube.com:443
+2023-11-06 15:08:01,174 DEBUG    [connectionpool.py:546] https://www.youtube.com:443 "GET /watch?v=DBOgQMcp_TY HTTP/1.1" 200 None
+2023-11-06 15:08:02,152 DEBUG    [connectionpool.py:1048] Starting new HTTPS connection (1): www.youtube.com:443
+2023-11-06 15:08:04,219 DEBUG    [connectionpool.py:546] https://www.youtube.com:443 "GET /api/timedtext?v=DBOgQMcp_TY&ei=-bNIZeZ3h57_0Q-MjbLIAQ&caps=asr&opi=112496729&xoaf=5&hl=en&ip=0.0.0.0&ipbits=0&expire=1699288681&sparams=ip,ipbits,expire,v,ei,caps,opi,xoaf&signature=DA1516F86D09127A23CA954A8F27A9CE8A0C2E68.CD6443FA07EC995F82477CE71C52293CF0ECBA6A&key=yt8&kind=asr&lang=en HTTP/1.1" 200 None
+2023-11-06 15:09:16,857 INFO     [history_db.py:19] User history saved in DB
+2023-11-06 15:09:16,857 INFO     [exception_handler.py:29] 
+2023-11-06 15:09:16,857 DEBUG    [connectionpool.py:1048] Starting new HTTPS connection (1): www.youtube.com:443
+2023-11-06 15:09:19,264 DEBUG    [connectionpool.py:546] https://www.youtube.com:443 "GET /watch?v=WPB3sDqEHlM HTTP/1.1" 200 None
+2023-11-06 15:09:20,395 DEBUG    [connectionpool.py:1048] Starting new HTTPS connection (1): www.youtube.com:443
+2023-11-06 15:09:21,971 DEBUG    [connectionpool.py:546] https://www.youtube.com:443 "GET /api/timedtext?v=WPB3sDqEHlM&ei=R7RIZdCbBrah_9EPjMOIiAM&caps=asr&opi=112496729&xoaf=5&hl=en&ip=0.0.0.0&ipbits=0&expire=1699288759&sparams=ip,ipbits,expire,v,ei,caps,opi,xoaf&signature=EE1C4CF4FA202F69398EA750CE46A9113B306E4D.02B58A338F1456189482794382851FCE2B33832B&key=yt8&kind=asr&lang=en HTTP/1.1" 200 None
+2023-11-06 15:10:10,949 INFO     [main.py:24] Starting with Youtube Transcript Summariser.
+2023-11-06 15:10:44,596 INFO     [main.py:24] Starting with Youtube Transcript Summariser.
+2023-11-06 15:10:57,259 INFO     [history_db.py:19] User history saved in DB
+2023-11-06 15:10:57,259 INFO     [exception_handler.py:29] 
+2023-11-06 15:10:57,267 DEBUG    [connectionpool.py:1048] Starting new HTTPS connection (1): www.youtube.com:443
+2023-11-06 15:10:59,437 DEBUG    [connectionpool.py:546] https://www.youtube.com:443 "GET /watch?v=WPB3sDqEHlM HTTP/1.1" 200 None
+2023-11-06 15:11:00,497 DEBUG    [connectionpool.py:1048] Starting new HTTPS connection (1): www.youtube.com:443
+2023-11-06 15:11:02,122 DEBUG    [connectionpool.py:546] https://www.youtube.com:443 "GET /api/timedtext?v=WPB3sDqEHlM&ei=q7RIZfDfD52U8wSIsYngCg&caps=asr&opi=112496729&xoaf=5&hl=en&ip=0.0.0.0&ipbits=0&expire=1699288859&sparams=ip,ipbits,expire,v,ei,caps,opi,xoaf&signature=2F1350F739C1775C114DAB0DCDC633F73A9136E8.E0E2A9526963ECD0FC5BAEB921E18A1AED86F4FD&key=yt8&kind=asr&lang=en HTTP/1.1" 200 None
+2023-11-06 15:12:23,508 INFO     [main.py:24] Starting with Youtube Transcript Summariser.
+2023-11-06 15:12:32,882 INFO     [history_db.py:19] User history saved in DB
+2023-11-06 15:12:32,882 INFO     [exception_handler.py:29] 
+2023-11-06 15:12:32,898 DEBUG    [connectionpool.py:1048] Starting new HTTPS connection (1): www.youtube.com:443
+2023-11-06 15:12:35,049 DEBUG    [connectionpool.py:546] https://www.youtube.com:443 "GET /watch?v=WPB3sDqEHlM HTTP/1.1" 200 None
+2023-11-06 15:12:36,300 DEBUG    [connectionpool.py:1048] Starting new HTTPS connection (1): www.youtube.com:443
+2023-11-06 15:12:39,577 DEBUG    [connectionpool.py:546] https://www.youtube.com:443 "GET /api/timedtext?v=WPB3sDqEHlM&ei=CrVIZcPSNcio_9EP-9CQuAk&caps=asr&opi=112496729&xoaf=5&hl=en&ip=0.0.0.0&ipbits=0&expire=1699288954&sparams=ip,ipbits,expire,v,ei,caps,opi,xoaf&signature=B6367B936AC3239DBC9B447D1CF171FC06F7AC76.526276FBC83AE89304FD47084C4F368499104FD0&key=yt8&kind=asr&lang=en HTTP/1.1" 200 None
+2023-11-06 15:12:59,335 INFO     [main.py:24] Starting with Youtube Transcript Summariser.
+2023-11-06 15:13:07,563 INFO     [history_db.py:19] User history saved in DB
+2023-11-06 15:13:07,563 INFO     [exception_handler.py:29] 
+2023-11-06 15:13:07,563 DEBUG    [connectionpool.py:1048] Starting new HTTPS connection (1): www.youtube.com:443
+2023-11-06 15:13:09,855 DEBUG    [connectionpool.py:546] https://www.youtube.com:443 "GET /watch?v=WPB3sDqEHlM HTTP/1.1" 200 None
+2023-11-06 15:13:10,883 DEBUG    [connectionpool.py:1048] Starting new HTTPS connection (1): www.youtube.com:443
+2023-11-06 15:13:12,493 DEBUG    [connectionpool.py:546] https://www.youtube.com:443 "GET /api/timedtext?v=WPB3sDqEHlM&ei=LbVIZZW8Kor18gSA34eQDw&caps=asr&opi=112496729&xoaf=5&hl=en&ip=0.0.0.0&ipbits=0&expire=1699288989&sparams=ip,ipbits,expire,v,ei,caps,opi,xoaf&signature=08F774BD1FCBE96832037CA7482AD5565254D11D.509D061C381CDE263BE333C0718E6F305248E0EB&key=yt8&kind=asr&lang=en HTTP/1.1" 200 None
+2023-11-06 15:13:12,509 DEBUG    [selector_events.py:54] Using selector: SelectSelector
+2023-11-06 15:13:36,031 INFO     [main.py:24] Starting with Youtube Transcript Summariser.
+2023-11-06 15:13:46,570 INFO     [history_db.py:19] User history saved in DB
+2023-11-06 15:13:46,570 INFO     [exception_handler.py:29] 
+2023-11-06 15:13:46,570 DEBUG    [connectionpool.py:1048] Starting new HTTPS connection (1): www.youtube.com:443
+2023-11-06 15:14:13,125 INFO     [main.py:24] Starting with Youtube Transcript Summariser.
+2023-11-06 15:14:20,836 INFO     [login.py:50] Invalid login occurred
+2023-11-06 15:14:35,299 INFO     [main.py:24] Starting with Youtube Transcript Summariser.
+2023-11-06 15:14:57,899 INFO     [history_db.py:19] User history saved in DB
+2023-11-06 15:14:57,907 INFO     [exception_handler.py:29] 
+2023-11-06 15:14:57,907 DEBUG    [connectionpool.py:1048] Starting new HTTPS connection (1): www.youtube.com:443
+2023-11-06 15:15:32,933 INFO     [history_db.py:19] User history saved in DB
+2023-11-06 15:15:32,933 INFO     [exception_handler.py:29] 
+2023-11-06 15:15:32,944 DEBUG    [connectionpool.py:1048] Starting new HTTPS connection (1): www.youtube.com:443
+2023-11-06 15:15:37,179 DEBUG    [connectionpool.py:546] https://www.youtube.com:443 "GET /watch?v=WPB3sDqEHlM HTTP/1.1" 200 None
+2023-11-06 15:15:38,356 DEBUG    [connectionpool.py:1048] Starting new HTTPS connection (1): www.youtube.com:443
+2023-11-06 15:15:39,924 DEBUG    [connectionpool.py:546] https://www.youtube.com:443 "GET /api/timedtext?v=WPB3sDqEHlM&ei=wbVIZZhfiI3_0Q_rgp_oBQ&caps=asr&opi=112496729&xoaf=5&hl=en&ip=0.0.0.0&ipbits=0&expire=1699289137&sparams=ip,ipbits,expire,v,ei,caps,opi,xoaf&signature=DD8E4F54B11FA4121B5FE9C26B563360B1980197.4CDC763F9F38DD699D839FB3622EB0CDE5F9468C&key=yt8&kind=asr&lang=en HTTP/1.1" 200 None
+2023-11-06 15:15:39,940 DEBUG    [selector_events.py:54] Using selector: SelectSelector
+2023-11-06 15:15:58,296 INFO     [submit_video_ops.py:86] Transcript file generated
+2023-11-06 15:16:52,954 INFO     [submit_video_ops.py:80] Summary file generated
+2023-11-06 15:17:15,554 INFO     [users_db.py:41] User updated and changes done in DB
+2023-11-06 15:17:15,554 INFO     [users_helper.py:36] User downgraded to non-premium
+2023-11-06 15:17:15,554 INFO     [premium_user.py:40] User downgraded to non-premium
+2023-11-06 15:17:19,602 INFO     [non_premium_user.py:29] Non-premium user logged out
+2023-11-06 15:17:19,602 INFO     [login.py:79] User exited from app
+2023-11-06 15:22:22,314 INFO     [main.py:24] Starting with Youtube Transcript Summariser.
+2023-11-06 15:25:17,767 INFO     [main.py:24] Starting with Youtube Transcript Summariser.
+2023-11-06 15:25:45,399 INFO     [users_db.py:24] User created and inserted to DB
+2023-11-06 15:26:45,061 INFO     [login.py:50] Invalid login occurred
+2023-11-06 15:27:03,485 INFO     [non_premium_user.py:29] Non-premium user logged out
+2023-11-06 15:27:03,485 INFO     [login.py:79] User exited from app
+2023-11-06 15:28:57,451 INFO     [users_db.py:24] User created and inserted to DB
+2023-11-06 15:29:20,996 INFO     [users_db.py:41] User updated and changes done in DB
+2023-11-06 15:29:20,996 INFO     [users_helper.py:19] User upgraded to premium
+2023-11-06 15:29:20,996 INFO     [non_premium_user.py:43] User upgraded to premium
+2023-11-06 15:29:23,463 INFO     [premium_user.py:27] Premium user logged out
+2023-11-06 15:29:23,463 INFO     [login.py:79] User exited from app
+2023-11-06 15:31:41,439 INFO     [history_db.py:19] User history saved in DB
+2023-11-06 15:31:41,441 INFO     [exception_handler.py:29] 
+2023-11-06 15:31:41,446 DEBUG    [connectionpool.py:1048] Starting new HTTPS connection (1): www.youtube.com:443
+2023-11-06 15:31:44,474 DEBUG    [connectionpool.py:546] https://www.youtube.com:443 "GET /watch?v=fBnAMUkNM2k HTTP/1.1" 200 None
+2023-11-06 15:31:45,336 DEBUG    [connectionpool.py:1048] Starting new HTTPS connection (1): www.youtube.com:443
+2023-11-06 15:31:47,236 DEBUG    [connectionpool.py:546] https://www.youtube.com:443 "GET /api/timedtext?v=fBnAMUkNM2k&ei=iLlIZZveBbSF_9EP9c6xiA8&caps=asr&opi=112496729&xoaf=5&hl=en&ip=0.0.0.0&ipbits=0&expire=1699290104&sparams=ip,ipbits,expire,v,ei,caps,opi,xoaf&signature=38E87EC90A4FF16D6DE582E2D7F3297F9B76E529.C7702C955D174E5C35956BADA9AA0F87B963AA47&key=yt8&lang=en HTTP/1.1" 200 None
+2023-11-06 15:31:47,363 DEBUG    [selector_events.py:54] Using selector: SelectSelector
+2023-11-06 15:32:24,486 INFO     [submit_video_ops.py:80] Summary file generated
+2023-11-06 15:32:27,232 INFO     [submit_video_ops.py:86] Transcript file generated
+2023-11-06 15:32:55,912 INFO     [messages_db.py:27] Message sent to DB
+2023-11-06 15:32:55,913 INFO     [premium_user_controller.py:27] Premium user requested message
+2023-11-06 15:33:34,283 INFO     [messages_db.py:27] Message sent to DB
+2023-11-06 15:33:34,291 INFO     [premium_user_controller.py:23] Premium user requested for premium listing
+2023-11-06 15:33:42,168 INFO     [premium_user.py:27] Premium user logged out
+2023-11-06 15:33:42,168 INFO     [login.py:79] User exited from app
+2023-11-06 15:35:04,738 INFO     [exception_handler.py:29] 
+2023-11-06 15:36:11,530 DEBUG    [users_db.py:26] User failed to created and inserted to DB
+2023-11-06 15:36:23,870 INFO     [login.py:50] Invalid login occurred
+2023-11-06 15:36:34,288 INFO     [login.py:50] Invalid login occurred
+2023-11-06 15:36:53,938 INFO     [users_db.py:24] User created and inserted to DB
+2023-11-06 15:39:08,100 INFO     [history_db.py:19] User history saved in DB
+2023-11-06 15:39:08,101 INFO     [exception_handler.py:29] 
+2023-11-06 15:39:08,109 DEBUG    [connectionpool.py:1048] Starting new HTTPS connection (1): www.youtube.com:443
+2023-11-06 15:39:12,906 DEBUG    [connectionpool.py:546] https://www.youtube.com:443 "GET /watch?v=XdV4OB6dzOY HTTP/1.1" 200 None
+2023-11-06 15:39:13,899 DEBUG    [connectionpool.py:1048] Starting new HTTPS connection (1): www.youtube.com:443
+2023-11-06 15:39:15,524 DEBUG    [connectionpool.py:546] https://www.youtube.com:443 "GET /api/timedtext?v=XdV4OB6dzOY&ei=SLtIZZC1LZ6N_9EPiIWe-AU&caps=asr&opi=112496729&xoaf=5&hl=en&ip=0.0.0.0&ipbits=0&expire=1699290552&sparams=ip,ipbits,expire,v,ei,caps,opi,xoaf&signature=E13F91FFB33D87C44C15AE75636795CEB43148CB.02606D01442B5BEBF8B6E84C183E15D6BEA511A4&key=yt8&kind=asr&lang=en HTTP/1.1" 200 None
+2023-11-06 15:39:15,682 DEBUG    [selector_events.py:54] Using selector: SelectSelector
+2023-11-06 15:40:45,882 INFO     [history_db.py:19] User history saved in DB
+2023-11-06 15:40:45,882 INFO     [exception_handler.py:29] 
+2023-11-06 15:40:45,889 DEBUG    [connectionpool.py:1048] Starting new HTTPS connection (1): www.youtube.com:443
+2023-11-06 15:40:49,633 DEBUG    [connectionpool.py:546] https://www.youtube.com:443 "GET /watch?v=nLBSp60F8qo HTTP/1.1" 200 None
+2023-11-06 15:43:43,574 INFO     [history_db.py:19] User history saved in DB
+2023-11-06 15:43:43,574 INFO     [exception_handler.py:29] 
+2023-11-06 15:43:43,578 DEBUG    [connectionpool.py:1048] Starting new HTTPS connection (1): www.youtube.com:443
+2023-11-06 15:43:47,172 DEBUG    [connectionpool.py:546] https://www.youtube.com:443 "GET /watch?v=RJIbWk66n88 HTTP/1.1" 200 None
+2023-11-06 15:43:48,198 DEBUG    [connectionpool.py:1048] Starting new HTTPS connection (1): www.youtube.com:443
+2023-11-06 15:43:49,990 DEBUG    [connectionpool.py:546] https://www.youtube.com:443 "GET /api/timedtext?v=RJIbWk66n88&ei=W7xIZZIGz6z_0Q-syoKIBQ&caps=asr&opi=112496729&xoaf=4&hl=en&ip=0.0.0.0&ipbits=0&expire=1699290827&sparams=ip,ipbits,expire,v,ei,caps,opi,xoaf&signature=9078B0B9BCC118D2D172EA6FECD97665FA804097.BEAD7723AD0913172464C567C65017FEB6F88A10&key=yt8&kind=asr&lang=en HTTP/1.1" 200 None
+2023-11-06 15:43:50,001 DEBUG    [selector_events.py:54] Using selector: SelectSelector
+2023-11-06 15:44:48,871 INFO     [non_premium_user.py:29] Non-premium user logged out
+2023-11-06 15:44:48,871 INFO     [login.py:79] User exited from app
+2023-11-06 15:46:21,216 INFO     [login.py:50] Invalid login occurred
+2023-11-06 15:46:34,537 INFO     [history_db.py:19] User history saved in DB
+2023-11-06 15:46:34,537 INFO     [exception_handler.py:29] 
+2023-11-06 15:46:34,549 DEBUG    [connectionpool.py:1048] Starting new HTTPS connection (1): www.youtube.com:443
+2023-11-06 15:46:36,484 DEBUG    [connectionpool.py:546] https://www.youtube.com:443 "GET /watch?v=mIlXQPxKwg8 HTTP/1.1" 200 None
+2023-11-06 15:48:22,951 INFO     [history_db.py:19] User history saved in DB
+2023-11-06 15:48:22,953 INFO     [exception_handler.py:29] 
+2023-11-06 15:48:22,957 DEBUG    [connectionpool.py:1048] Starting new HTTPS connection (1): www.youtube.com:443
+2023-11-06 15:48:25,391 DEBUG    [connectionpool.py:546] https://www.youtube.com:443 "GET /watch?v=mIlXQPxKwg8 HTTP/1.1" 200 None
+2023-11-06 15:50:40,622 INFO     [main.py:24] Starting with Youtube Transcript Summariser.
+2023-11-06 15:51:50,262 INFO     [history_db.py:19] User history saved in DB
+2023-11-06 15:51:50,262 INFO     [exception_handler.py:29] 
+2023-11-06 15:51:50,270 DEBUG    [connectionpool.py:1048] Starting new HTTPS connection (1): www.youtube.com:443
+2023-11-06 15:51:53,049 DEBUG    [connectionpool.py:546] https://www.youtube.com:443 "GET /watch?v=T7K0pZ9tGi4 HTTP/1.1" 200 None
+2023-11-06 15:51:54,090 DEBUG    [connectionpool.py:1048] Starting new HTTPS connection (1): www.youtube.com:443
+2023-11-06 15:51:55,714 DEBUG    [connectionpool.py:546] https://www.youtube.com:443 "GET /api/timedtext?v=T7K0pZ9tGi4&ei=QL5IZY-qNZKo_9EPobmygAk&caps=asr&opi=112496729&xoaf=4&hl=en&ip=0.0.0.0&ipbits=0&expire=1699291312&sparams=ip,ipbits,expire,v,ei,caps,opi,xoaf&signature=B8424F41EA0D264AE9E706D175477CF3C029A2E4.030344F0A0B313A62916830AC87C9E133F83B4D0&key=yt8&lang=en HTTP/1.1" 200 None
+2023-11-06 15:51:55,745 DEBUG    [selector_events.py:54] Using selector: SelectSelector
+2023-11-06 15:52:24,512 INFO     [main.py:24] Starting with Youtube Transcript Summariser.
+2023-11-06 15:53:01,643 INFO     [main.py:24] Starting with Youtube Transcript Summariser.
+2023-11-06 15:54:09,420 INFO     [history_db.py:19] User history saved in DB
+2023-11-06 15:54:09,423 INFO     [exception_handler.py:29] 
+2023-11-06 15:54:09,426 DEBUG    [connectionpool.py:1048] Starting new HTTPS connection (1): www.youtube.com:443
+2023-11-06 15:54:12,970 DEBUG    [connectionpool.py:546] https://www.youtube.com:443 "GET /watch?v=d1vSlNz0PaA HTTP/1.1" 200 None
+2023-11-06 15:55:38,010 INFO     [main.py:24] Starting with Youtube Transcript Summariser.
+2023-11-06 15:55:46,764 INFO     [history_db.py:19] User history saved in DB
+2023-11-06 15:55:46,764 INFO     [exception_handler.py:29] 
+2023-11-06 15:55:46,766 DEBUG    [connectionpool.py:1048] Starting new HTTPS connection (1): www.youtube.com:443
+2023-11-06 15:55:48,139 DEBUG    [connectionpool.py:546] https://www.youtube.com:443 "GET /watch?v=G-Wn48geCJ8 HTTP/1.1" 200 None
+2023-11-06 15:55:49,179 DEBUG    [connectionpool.py:1048] Starting new HTTPS connection (1): www.youtube.com:443
+2023-11-06 15:55:51,122 DEBUG    [connectionpool.py:546] https://www.youtube.com:443 "GET /api/timedtext?v=G-Wn48geCJ8&ei=K79IZevTOc6J8wTM1abICw&caps=asr&opi=112496729&xoaf=4&hl=en&ip=0.0.0.0&ipbits=0&expire=1699291547&sparams=ip,ipbits,expire,v,ei,caps,opi,xoaf&signature=5ED494B0C422A5F00AD5F222D421946E6CD433B2.A72AE77215EDB4685FCECE9F7D1AC687566E8967&key=yt8&lang=en HTTP/1.1" 200 None
+2023-11-06 15:55:51,163 DEBUG    [selector_events.py:54] Using selector: SelectSelector
+2023-11-06 15:55:59,756 INFO     [submit_video_ops.py:86] Transcript file generated
+2023-11-06 15:56:02,270 INFO     [submit_video_ops.py:80] Summary file generated
+2023-11-06 15:56:44,467 INFO     [main.py:24] Starting with Youtube Transcript Summariser.
+2023-11-06 15:56:55,928 INFO     [exception_handler.py:29] 
+2023-11-06 15:57:26,416 INFO     [exception_handler.py:29] 
+2023-11-06 16:00:18,193 INFO     [main.py:24] Starting with Youtube Transcript Summariser.
+2023-11-06 16:00:29,697 INFO     [exception_handler.py:29] 
+2023-11-06 16:01:04,653 INFO     [exception_handler.py:29] None
+2023-11-06 16:01:04,665 INFO     [admincontroller.py:109] Admin unbanned url
+2023-11-06 16:01:09,898 INFO     [exception_handler.py:29] 
+2023-11-06 16:01:50,135 INFO     [history_db.py:19] User history saved in DB
+2023-11-06 16:01:50,135 INFO     [exception_handler.py:29] 
+2023-11-06 16:01:50,142 DEBUG    [connectionpool.py:1048] Starting new HTTPS connection (1): www.youtube.com:443
+2023-11-06 16:01:53,288 DEBUG    [connectionpool.py:546] https://www.youtube.com:443 "GET /watch?v=C1ObitoLwhM HTTP/1.1" 200 None
+2023-11-06 16:01:54,340 DEBUG    [connectionpool.py:1048] Starting new HTTPS connection (1): www.youtube.com:443
+2023-11-06 16:01:56,277 DEBUG    [connectionpool.py:546] https://www.youtube.com:443 "GET /api/timedtext?v=C1ObitoLwhM&ei=mcBIZZpoqo7_0Q-DzrbIBQ&caps=asr&opi=112496729&xoaf=5&hl=en&ip=0.0.0.0&ipbits=0&expire=1699291913&sparams=ip,ipbits,expire,v,ei,caps,opi,xoaf&signature=780945E4B5F1A7B28FC2F1D6E03A7494CC030E3D.8E1FC5B8C3A14A6933560C7C0158162DA61F26A6&key=yt8&lang=en HTTP/1.1" 200 None
+2023-11-06 16:01:56,341 DEBUG    [selector_events.py:54] Using selector: SelectSelector
+2023-11-06 16:10:26,688 INFO     [history_db.py:19] User history saved in DB
+2023-11-06 16:10:26,688 INFO     [exception_handler.py:29] 
+2023-11-06 16:10:26,708 DEBUG    [connectionpool.py:1048] Starting new HTTPS connection (1): www.youtube.com:443
+2023-11-06 16:10:29,769 DEBUG    [connectionpool.py:546] https://www.youtube.com:443 "GET /watch?v=C1ObitoLwhM HTTP/1.1" 200 None
+2023-11-06 16:10:30,848 DEBUG    [connectionpool.py:1048] Starting new HTTPS connection (1): www.youtube.com:443
+2023-11-06 16:10:32,397 DEBUG    [connectionpool.py:546] https://www.youtube.com:443 "GET /api/timedtext?v=C1ObitoLwhM&ei=ncJIZbzNJcqE8wS69KjoCw&caps=asr&opi=112496729&xoaf=5&hl=en&ip=0.0.0.0&ipbits=0&expire=1699292429&sparams=ip,ipbits,expire,v,ei,caps,opi,xoaf&signature=ADA268062723305760C7B3645DA1599538745E19.1D8941F0DEF95EE2B09792EA7466285BE508156E&key=yt8&lang=en HTTP/1.1" 200 None
+2023-11-06 16:10:32,476 DEBUG    [selector_events.py:54] Using selector: SelectSelector
+2023-11-06 16:15:53,798 INFO     [history_db.py:19] User history saved in DB
+2023-11-06 16:15:53,805 INFO     [exception_handler.py:29] 
+2023-11-06 16:15:53,816 DEBUG    [connectionpool.py:1048] Starting new HTTPS connection (1): www.youtube.com:443
+2023-11-06 16:15:57,578 DEBUG    [connectionpool.py:546] https://www.youtube.com:443 "GET /watch?v=C1ObitoLwhM HTTP/1.1" 200 None
+2023-11-06 16:15:58,638 DEBUG    [connectionpool.py:1048] Starting new HTTPS connection (1): www.youtube.com:443
+2023-11-06 16:16:00,231 DEBUG    [connectionpool.py:546] https://www.youtube.com:443 "GET /api/timedtext?v=C1ObitoLwhM&ei=5cNIZZC0GY-F8wT7jKeICw&caps=asr&opi=112496729&xoaf=5&hl=en&ip=0.0.0.0&ipbits=0&expire=1699292757&sparams=ip,ipbits,expire,v,ei,caps,opi,xoaf&signature=C0CCDCE3E62F9CA4BF6CF561AE70E0CC538A4A4D.E31ECF66FA8BFD0A4039554A24BD556E35E52AF9&key=yt8&lang=en HTTP/1.1" 200 None
+2023-11-06 16:16:00,306 DEBUG    [selector_events.py:54] Using selector: SelectSelector

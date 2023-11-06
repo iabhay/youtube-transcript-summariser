@@ -1,5 +1,8 @@
 import oneai
 import keys
+import logging
+from config.log_config.log_config import LogStatements
+logger = logging.getLogger('summary_generator')
 
 
 class SummaryGenerator:

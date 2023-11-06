@@ -3,12 +3,15 @@ from azure.core.credentials import AzureKeyCredential
 from azure.core.exceptions import HttpResponseError
 from azure.ai.contentsafety.models import AnalyzeTextOptions
 import keys
+import logging
+from config.log_config.log_config import LogStatements
+logger = logging.getLogger('content_checker')
 
 
 class ContentChecker:
     def __init__(self):
-        self.endpoint = keys.CONTENT_CHECK_ENDPOINT
-        self.key = AzureKeyCredential(keys.CONTENT_CHECK_KEY)
+        self.endpoint = "https://youtube-transcript-summariser.cognitiveservices.azure.com/"
+        self.key = AzureKeyCredential("c702ec3b4b194de3a22d767b6bec6001")
 
     def analyze_text(self, text):
         text = text[:10000]

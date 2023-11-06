@@ -1,7 +1,8 @@
+import logging
 from youtube_transcript_api import YouTubeTranscriptApi
-
 import textwrap
-
+from config.log_config.log_config import LogStatements
+logger = logging.getLogger('transcript_generator')
 
 class transcriptor:
 
@@ -28,7 +29,7 @@ class transcriptor:
         transcript = self.get_transcript(video_id)
         if transcript:
             formatted_transcript = ""
-            wrapper = textwrap.TextWrapper(width=200)
+            wrapper = textwrap.TextWrapper(width=300)
             for entry in transcript:
                 wrapped_text = wrapper.fill(text=entry['text'])
                 res.append(wrapped_text)

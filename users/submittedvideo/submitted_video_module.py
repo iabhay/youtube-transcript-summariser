@@ -1,5 +1,6 @@
 from config.config import Config
 from utils.dicts import SubmittedVideo
+from utils.exception_handler import handle_exceptions
 
 
 class SubmittedVideoController:
@@ -10,13 +11,16 @@ class SubmittedVideoController:
 
     def submitted_video_module(self, transcript, summary, hid):
         while True:
-            ask = int(input(Config.AFTER_SUBMITTING_URL_PROMPT))
-            if ask == int(Config.AFTER_SUBMITTING_URL_PROMPT_LENGTH):
-                print(Config.EXITING_PROMPT)
-                return None
-                break
-            n = len(self.submit_menu)
-            if 0 < ask <= n:
-                self.submit_menu[ask](transcript, summary, hid)
-            else:
-                print(Config.INVALID_INPUT_PROMPT)
+            try:
+                ask = int(input(Config.AFTER_SUBMITTING_URL_PROMPT))
+                if ask == int(Config.AFTER_SUBMITTING_URL_PROMPT_LENGTH):
+                    print(Config.EXITING_PROMPT)
+                    return None
+                    break
+                n = len(self.submit_menu)
+                if 0 < ask <= n:
+                    self.submit_menu[ask](transcript, summary, hid)
+                else:
+                    print(Config.INVALID_INPUT_PROMPT)
+            except ValueError:
+                print("Enter Numbers only")

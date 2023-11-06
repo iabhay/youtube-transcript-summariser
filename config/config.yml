@@ -54,11 +54,13 @@ PREMIUM_PROMPT: |
   6. Cancel Subscription
   7. Logout
   Enter choice:
-PREMIUM_PROMPT_LENGTH: 6
+PREMIUM_PROMPT_LENGTH: 7
+SECURE_USERNAME_PROMPT: |
+  Your username must contain:
+  Min. 4 length (can contain letters, numbers, @, _, - , .)
 SECURE_PASSWORD_PROMPT: |
   Your password must contain:
-  Min. 8 length, one uppercase letter, one lowercase letter and one number
-  Enter Choice:
+  Min. 8 length, one uppercase letter, one lowercase letter, one symbol and one number
 SUBMIT_VIDEO_PROMPT: Enter URL (Language - English) or Press 1 to back -
 LANGUAGE_PROMPT: Enter Language for Summary -
 AFTER_SUBMITTING_URL: |
@@ -84,7 +86,7 @@ ENTER_USERNAME_PROMPT: Enter Username -
 ENTER_PASSWORD_PROMPT: Enter Password -
 ENTER_URL: Enter URL -
 NO_USER_FOUND: No Such User Found
-No_URL_FOUND: No Such Banned URL Found
+NO_URL_FOUND: No Such Banned URL Found
 PROCESSING_PROMPT: Processing...
 LANGUAGES: |
   LANG CODE - af       , LANGUAGE -   Afrikaans
