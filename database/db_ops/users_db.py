@@ -1,8 +1,6 @@
-from datetime import datetime
-from tabulate import tabulate
-from database.database_connection import DatabaseConnection
-from database.database_query import UsersTableQuery, UserSearchesTableQuery, MessageTableQuery,HistoryTableQuery, PremiumListingTable,BannedUrlTable
 from shortuuid import ShortUUID
+from datetime import datetime
+from database.database_query import UsersTableQuery, UserSearchesTableQuery, MessageTableQuery,HistoryTableQuery, PremiumListingTable,BannedUrlTable
 from database.db_ops.db_helper import DBHelper
 # from utils.Exception_Handler.sql_exception_handler import exception_handler
 from config.config import Config

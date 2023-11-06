@@ -1,7 +1,6 @@
+from prettytable import PrettyTable
 from database.database_connection import DatabaseConnection
 YTTSDB = "YTTSDB.db"
-from prettytable import PrettyTable
-from tabulate import tabulate
 
 class DBHelper:
     @classmethod

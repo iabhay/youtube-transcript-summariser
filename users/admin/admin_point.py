@@ -15,9 +15,11 @@ class Admin:
             if ask_user == int(Config.ADMIN_PROMPT_LENGTH):
                 print(Config.EXITING_PROMPT)
                 break
+            # message sub menu module
             elif ask_user == 9:
                 self.messages_handler()
             elif (0 < ask_user <= len(self.adm_menu)) and ask_user != 9:
+                # using dictionary - functionality mapping
                 self.adm_menu[ask_user]()
             else:
                 print(Config.INVALID_INPUT_PROMPT)

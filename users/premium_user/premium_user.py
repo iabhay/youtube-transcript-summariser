@@ -19,12 +19,15 @@ class PremiumUser:
             if ask == int(Config.PREMIUM_PROMPT_LENGTH):
                 print(Config.EXITING_PROMPT)
                 break
+            # using dictionary - functionality mapping
             elif 0 < ask <= len(self.premium_menu):
                 res = self.premium_menu[ask]()
                 if res:
+                    # If good video or premium listed video then redirect
                     self.submitted_video_obj.submitted_video_module(res[0], res[1], res[2])
                 elif res == False:
                     if ask == 6:
+                        # Role Changing
                         return "premium"
                     break
                 elif res == None:

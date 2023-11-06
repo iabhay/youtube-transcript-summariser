@@ -2,6 +2,7 @@ from database.db_ops.messages_db import MessageDB
 from database.db_ops.premium_listing_db import PremiumListingsDB
 from database.db_ops.history_db import HistoryDB
 
+
 class PremiumUserController:
     def __init__(self, uid):
         self.uid = uid
@@ -11,6 +12,7 @@ class PremiumUserController:
 
     def send_message_to_admin(self, url=""):
         ask = input("Enter Message for admin: ")
+        # if url is given that means premium listing message
         if len(url) > 0:
             ask = ask + ", Url for premium listing -> " + url
         self.msg_obj.save_message(ask)

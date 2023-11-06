@@ -14,7 +14,7 @@ class YTTS:
             2: login.login_module
         }
 
-    @handle_exceptions()
+    # @handle_exceptions()
     def menu(self):
         print(Config.APP_INTRO)
         while True:

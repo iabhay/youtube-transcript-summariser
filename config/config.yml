@@ -80,6 +80,12 @@ INVALID_INPUT_PROMPT: Please Select Carefully!
 EXITING_PROMPT: Exiting...
 APP_INTRO: 'Transcriptor :-> Smart Video, Simply Summarised!!'
 APP_OUTRO: Bye! Thanks for using.
+ENTER_USERNAME_PROMPT: Enter Username -
+ENTER_PASSWORD_PROMPT: Enter Password -
+ENTER_URL: Enter URL -
+NO_USER_FOUND: No Such User Found
+No_URL_FOUND: No Such Banned URL Found
+PROCESSING_PROMPT: Processing...
 LANGUAGES: |
   LANG CODE - af       , LANGUAGE -   Afrikaans
   LANG CODE - ak       , LANGUAGE -   Akan

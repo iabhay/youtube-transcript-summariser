@@ -1,7 +1,7 @@
+from shortuuid import ShortUUID
 from datetime import datetime
 from database.db_ops.db_helper import DBHelper
 from database.database_query import BannedUrlTable
-from shortuuid import ShortUUID
 
 class BanUrlDB:
     def __init__(self):

@@ -15,36 +15,42 @@ class Login:
 
     def login_module(self):
         while True:
+            # If role changed then self.res will be already filled, and checking for returning role from module which
+            # it is coming
             if self.res and self.uid and (self.res == "nonpremium" or self.res == "premium"):
-                user = UsersDB(self.uid)
                 if self.res == "premium":
-                    non_premium_user = NonPremiumUser(self.uid)
+                    non_premium_user = NonPremiumUser(self.uid)  # self.uid will be already filled once user loggedin
                     self.res = non_premium_user.non_premium_module()
                 elif self.res == "nonpremium":
                     premium_user = PremiumUser(self.uid)
                     self.res = premium_user.premium_module()
+
+            # Just checking returning values from diff methods accordingly
             elif self.res == True or self.res == False or self.res == "":
-                username = input("Enter Your Name: ")
-                password = pwinput(prompt="Enter your password:- ", mask="*")
+                username = input(Config.ENTER_USERNAME_PROMPT)
+                password = pwinput(prompt=Config.ENTER_PASSWORD_PROMPT, mask="*")
+                # Direct redirect to admin module
                 if username == Config.ADMIN_USERNAME and password == Config.ADMIN_PASSWORD:
                     admin = Admin("")
                     admin.adminmodule()
                     break
                 else:
+                    # Authenticating user
                     hashed_password = hashlib.sha256(password.encode('utf-8')).hexdigest()
                     user = UsersDB("")
+                    # entry is basically all details about that user column wise
                     entry = user.check_user(username, hashed_password)
                     if not entry:
                         print("Invalid Credentials!!")
                         return
-                    uid = entry[0][0]
+                    uid = entry[0][0]  # this is unique id for that user that'll be used for all functions
                     self.uid = uid
                     m_obj = MessageDB(uid)
                     non_premium_user = NonPremiumUser(uid)
                     premium_user = PremiumUser(uid)
                     admin = Admin(uid)
                     print("You are logged in!!")
-                    # print(entry[0][4])
+                    # checking if user banned then redirecting to banned module
                     if entry[0][5] == "banned":
                         m_obj.banned_module()
                     elif entry[0][4] == "nonpremiumuser" and entry[0][5] == "unbanned":
@@ -53,12 +59,15 @@ class Login:
                     elif entry[0][4] == "premiumuser" and entry[0][5] == "unbanned":
                         self.res = premium_user.premium_module()
                         self.login_module()
+                        # for multiple admins (future purpose only)
                     elif entry[0][4] == "admin":
                         admin.adminmodule()
                         break
                     else:
                         print("Wrong role was filled!")
                     return True
+
+            # resetting as it's exiting
             elif not self.res:
                 self.uid = ""
                 self.res = ""

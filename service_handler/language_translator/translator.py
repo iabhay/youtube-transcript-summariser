@@ -1,9 +1,7 @@
-import googletrans
-import os
-import json
 from googletrans import Translator
 
-class Translator_handler:
+
+class TranslateHandler:
     def __init__(self):
         pass
 
@@ -11,4 +9,3 @@ class Translator_handler:
         translator = Translator()
         result = translator.translate(content, dest=target)
         return result
-

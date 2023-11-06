@@ -10,25 +10,21 @@ class Register:
         self.user = UsersDB("")
 
     def register_module(self):
-        username = input("Enter username: ")
+        username = input(Config.ENTER_USERNAME_PROMPT)
         print(Config.SECURE_PASSWORD_PROMPT)
-        password = pwinput("Enter Password: ", mask="*")
-        hashed_password = ""
+        password = pwinput(Config.ENTER_PASSWORD_PROMPT, mask="*")
+        # Checking for regex validation
         if not password_validation(password):
             print("Invalid Password!!")
         else:
             hashed_password = hashlib.sha256(password.encode('utf-8')).hexdigest()
+            # checking if already registered with username
             if not self.check_registration(username, hashed_password):
-            # try:
                 self.user.create_user(username, hashed_password)
                 print("Registered successfully!!")
-            # except Exception:
-            #     print(Exception.__name__)
-            #     print("Data not registered successfully.")
 
     def check_registration(self, name, password):
         is_already_registered = self.user.check_user(name, password)
-        # print(is_already_registered)
         if is_already_registered:
             print("Already registered!!\nTry login!!")
             return True

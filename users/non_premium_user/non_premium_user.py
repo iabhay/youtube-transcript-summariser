@@ -18,6 +18,7 @@ class NonPremiumUser:
     def non_premium_module(self):
         print(Config.BASIC_USER_INTRO)
         while True:
+            # using dictionary - functional mapping
             ask = int(input(Config.NON_PREMIUM_PROMPT))
             n = int(Config.NON_PREMIUM_PROMPT_LENGTH)
             if ask == n:
@@ -26,8 +27,10 @@ class NonPremiumUser:
             elif 0 < ask <= len(self.non_premium_menu):
                 res = self.non_premium_menu[ask]()
                 if res:
+                    # if video is good content then redirect to submitted video functionalities
                     self.submitted_video_obj.submitted_video_module(res[0], res[1], res[2])
                 elif res == False:
+                    # Role changing
                     if ask == 2:
                         return "nonpremium"
                     break
