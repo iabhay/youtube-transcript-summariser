@@ -19,15 +19,15 @@ class ContentChecker:
         request = AnalyzeTextOptions(text=text)
         try:
             response = client.analyze_text(request)
-        except HttpResponseError as e:
+        except Exception:
             print("Analyze text failed.")
-            raise
-        if response.hate_result:
-            res = {
-                    "Hate": response.hate_result.severity,
-                    "SelfHarm": response.self_harm_result.severity,
-                    "Adult": response.sexual_result.severity,
-                    "Violence": response.violence_result.severity
-                   }
-            return res
-        return False
+            return False
+        else:
+            if response.hate_result:
+                res = {
+                        "Hate": response.hate_result.severity,
+                        "SelfHarm": response.self_harm_result.severity,
+                        "Adult": response.sexual_result.severity,
+                        "Violence": response.violence_result.severity
+                       }
+                return res

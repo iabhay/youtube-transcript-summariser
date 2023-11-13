@@ -618,3 +618,61 @@ Response headers:
 2023-11-13 14:18:22,973 INFO     [users_db.py:41] User updated and changes done in DB
 2023-11-13 14:18:22,973 INFO     [login.py:80] User exited from app
 2023-11-13 14:19:56,463 INFO     [messages_db.py:27] Message sent to DB
+2023-11-13 14:34:13,688 INFO     [main.py:24] Starting with Youtube Transcript Summariser.
+2023-11-13 14:34:38,839 INFO     [history_db.py:19] User history saved in DB
+2023-11-13 14:34:38,840 INFO     [exception_handler.py:29] 
+2023-11-13 14:34:38,843 DEBUG    [connectionpool.py:1048] Starting new HTTPS connection (1): www.youtube.com:443
+2023-11-13 14:34:41,450 DEBUG    [connectionpool.py:546] https://www.youtube.com:443 "GET /watch?v=3baWzvEDfgU HTTP/1.1" 200 None
+2023-11-13 14:34:42,019 DEBUG    [connectionpool.py:1048] Starting new HTTPS connection (1): www.youtube.com:443
+2023-11-13 14:34:42,603 DEBUG    [connectionpool.py:546] https://www.youtube.com:443 "GET /api/timedtext?v=3baWzvEDfgU&ei=qeZRZYOfJarb4t4PuumusA4&caps=asr&opi=112496729&xoaf=5&hl=en&ip=0.0.0.0&ipbits=0&expire=1699891481&sparams=ip,ipbits,expire,v,ei,caps,opi,xoaf&signature=6D1C30E45CECCC31C0ACE78BFB0C2B4946F0DB80.BCFEE78D3934B9347B5E2737441BA23EFFCFD82B&key=yt8&kind=asr&lang=en HTTP/1.1" 200 None
+2023-11-13 14:34:42,613 DEBUG    [selector_events.py:54] Using selector: SelectSelector
+2023-11-13 14:35:03,275 INFO     [_universal.py:511] Request URL: 'https://youtube-transcript-summariser.cognitiveservices.azure.com//contentsafety/text:analyze?api-version=REDACTED'
+Request method: 'POST'
+Request headers:
+    'Content-Type': 'application/json'
+    'Content-Length': '10292'
+    'Accept': 'application/json'
+    'x-ms-client-request-id': 'bb3aa362-8203-11ee-a621-9cb6d0bae4aa'
+    'User-Agent': 'azsdk-python-ai-contentsafety/1.0.0b1 Python/3.11.5 (Windows-10-10.0.22621-SP0)'
+    'Ocp-Apim-Subscription-Key': 'REDACTED'
+A body is sent with the request
+2023-11-13 14:35:03,275 DEBUG    [connectionpool.py:1048] Starting new HTTPS connection (1): youtube-transcript-summariser.cognitiveservices.azure.com:443
+2023-11-13 14:37:47,889 INFO     [main.py:24] Starting with Youtube Transcript Summariser.
+2023-11-13 14:38:03,083 INFO     [history_db.py:19] User history saved in DB
+2023-11-13 14:38:03,083 INFO     [exception_handler.py:29] 
+2023-11-13 14:38:03,083 DEBUG    [connectionpool.py:1048] Starting new HTTPS connection (1): www.youtube.com:443
+2023-11-13 14:38:52,368 INFO     [main.py:24] Starting with Youtube Transcript Summariser.
+2023-11-13 14:39:02,489 INFO     [history_db.py:19] User history saved in DB
+2023-11-13 14:39:02,489 INFO     [exception_handler.py:29] 
+2023-11-13 14:39:02,493 DEBUG    [connectionpool.py:1048] Starting new HTTPS connection (1): www.youtube.com:443
+2023-11-13 14:39:04,108 DEBUG    [connectionpool.py:546] https://www.youtube.com:443 "GET /watch?v=3baWzvEDfgU HTTP/1.1" 200 None
+2023-11-13 14:39:04,774 DEBUG    [connectionpool.py:1048] Starting new HTTPS connection (1): www.youtube.com:443
+2023-11-13 14:39:05,320 DEBUG    [connectionpool.py:546] https://www.youtube.com:443 "GET /api/timedtext?v=3baWzvEDfgU&ei=sOdRZZ7oD-qX4t4PkOW-mAw&caps=asr&opi=112496729&xoaf=5&hl=en&ip=0.0.0.0&ipbits=0&expire=1699891744&sparams=ip,ipbits,expire,v,ei,caps,opi,xoaf&signature=CB31B9145A9FADD8E3F7B2DD773F35211C8C20F7.A199E2243D686C3DB852C7502210CE0981D3AEFB&key=yt8&kind=asr&lang=en HTTP/1.1" 200 None
+2023-11-13 14:39:05,338 DEBUG    [selector_events.py:54] Using selector: SelectSelector
+2023-11-13 14:39:23,814 INFO     [_universal.py:511] Request URL: 'https://youtube-transcript-summariser.cognitiveservices.azure.com//contentsafety/text:analyze?api-version=REDACTED'
+Request method: 'POST'
+Request headers:
+    'Content-Type': 'application/json'
+    'Content-Length': '10292'
+    'Accept': 'application/json'
+    'x-ms-client-request-id': '5685aee8-8204-11ee-85a9-9cb6d0bae4aa'
+    'User-Agent': 'azsdk-python-ai-contentsafety/1.0.0b1 Python/3.11.5 (Windows-10-10.0.22621-SP0)'
+    'Ocp-Apim-Subscription-Key': 'REDACTED'
+A body is sent with the request
+2023-11-13 14:39:23,816 DEBUG    [connectionpool.py:1048] Starting new HTTPS connection (1): youtube-transcript-summariser.cognitiveservices.azure.com:443
+2023-11-13 14:39:27,253 DEBUG    [connectionpool.py:546] https://youtube-transcript-summariser.cognitiveservices.azure.com:443 "POST //contentsafety/text:analyze?api-version=2023-04-30-preview HTTP/1.1" 200 None
+2023-11-13 14:39:27,259 INFO     [_universal.py:550] Response status: 200
+Response headers:
+    'Transfer-Encoding': 'chunked'
+    'Content-Type': 'application/json; charset=utf-8'
+    'csp-billing-usage': 'REDACTED'
+    'api-supported-versions': 'REDACTED'
+    'x-envoy-upstream-service-time': 'REDACTED'
+    'apim-request-id': 'REDACTED'
+    'Strict-Transport-Security': 'REDACTED'
+    'x-content-type-options': 'REDACTED'
+    'x-ms-region': 'REDACTED'
+    'Date': 'Mon, 13 Nov 2023 09:09:26 GMT'
+2023-11-13 14:40:31,509 INFO     [video_service.py:103] Summary file generated
+2023-11-13 14:40:32,882 INFO     [video_service.py:109] Transcript file generated
+2023-11-13 14:41:27,335 INFO     [main.py:24] Starting with Youtube Transcript Summariser.

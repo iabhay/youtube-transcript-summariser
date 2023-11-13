@@ -53,12 +53,11 @@ class VideoService:
                     transcript = self.transcript_obj.format_transcript(self.urlid)
                     # summary generated from transcript
                     summary = self.summary_obj.summary_generator(transcript)
-                    if transcript:
+                    if transcript and summary:
                         # if premium listed then no need of content checking
                         if len(check_premium_lisiting) == 0:
                             # Content checking using API and categorising
                             content_check = self.content_check_obj.analyze_text(transcript)
-                            print(content_check)
                             if content_check:
                                 for key, value in content_check.items():
                                     if content_check[key] > 0:
@@ -72,8 +71,6 @@ class VideoService:
                                                   "PLEASE CONTACT ADMIN!!")
                                             return False
                                         return True
-                            else:
-                                print("Content checking failed")
                         self.submitted_video_module(transcript, summary, hid)
                     else:
                         print("This video is not supported. Please try other videos.")
