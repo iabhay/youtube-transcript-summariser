@@ -3,11 +3,12 @@ from database.database_connection import DatabaseConnection
 import logging
 from config.log_config.log_config import LogStatements
 logger = logging.getLogger('db_initialise')
+YTTSDB = r'YTTS\YTTSDB.db'
 class DBInitialise:
     @classmethod
     def create_all_tables(cls) -> None:
         try:
-            with DatabaseConnection('YTTSDB.db') as connection:
+            with DatabaseConnection(YTTSDB) as connection:
                 cursor = connection.cursor()
                 cursor.execute(CreateTablesQuery.query_create_user)
                 cursor.execute(CreateTablesQuery.query_create_history)

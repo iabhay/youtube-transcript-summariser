@@ -11,6 +11,7 @@ import logging
 from config.log_config.log_config import LogStatements
 logger = logging.getLogger('login')
 
+
 class Login:
     def __init__(self):
         self.uid = ""

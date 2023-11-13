@@ -1,17 +1,19 @@
 import logging
+from utils.input_validator import url_validation
 from service_handler.transcript_handler.transcript_generator import transcriptor
 from service_handler.content_checker.content_check import ContentChecker
 from database.db_ops.ban_url_db import BanUrlDB
 from database.db_ops.searches_db import SearchesDB
 from database.db_ops.history_db import HistoryDB
-from config.config import Config
 from database.db_ops.premium_listing_db import PremiumListingsDB
 from service_handler.summary_handler.sum_gen import SummaryGenerator
-from utils.input_validator import url_validation
+from config.config import Config
+# from utils.dicts import SubmittedVideo
 from config.log_config.log_config import LogStatements
-logger = logging.getLogger('submitted_video_ops')
+logger = logging.getLogger('video_service')
 
-class SubmitVideoOps:
+
+class VideoService:
     def __init__(self, uid):
         self.uid = uid
         self.transcript_obj = transcriptor()
@@ -23,6 +25,8 @@ class SubmitVideoOps:
         self.urlid = ""
         self.history_obj = HistoryDB(self.uid)
         self.transcript = ""
+        # self.submit_obj = SubmittedVideo(uid)
+        # self.submit_menu = self.submit_obj.submit_menu()
 
     def submit_video(self):
         ask = input(Config.SUBMIT_VIDEO_PROMPT)
@@ -41,47 +45,68 @@ class SubmitVideoOps:
                 premium_list_obj = PremiumListingsDB(self.uid)
                 check_premium_lisiting = premium_list_obj.check_premium_list_url(self.urlid)
 
-                if valid and check_premium_lisiting is None:
+                if valid and (len(check_premium_lisiting) == 0):
                     print("Already Banned Url")
 
                 else:
                     # transcript generated
                     transcript = self.transcript_obj.format_transcript(self.urlid)
+                    # summary generated from transcript
+                    summary = self.summary_obj.summary_generator(transcript)
                     if transcript:
-                        # summary generated from transcript
-                        summary = self.summary_obj.summary_generator(transcript)
-
                         # if premium listed then no need of content checking
-                        if check_premium_lisiting is None:
+                        if len(check_premium_lisiting) == 0:
                             # Content checking using API and categorising
                             content_check = self.content_check_obj.analyze_text(transcript)
+                            print(content_check)
                             if content_check:
                                 for key, value in content_check.items():
                                     if content_check[key] > 0:
                                         print("Url is banned.")
                                         # banning url
                                         self.ban_url_obj.save_ban_url(self.urlid, key, value)
+
                                         # checking if ban searches limit exceeded, if yes then instant logout
-                                        if not self.search_count_db.update_user_search_count(3):
+                                        if self.search_count_db.update_user_search_count(3) == False:
+                                            print("You have exhausted ban search limits in a day.\nYOU ARE BANNED. "
+                                                  "PLEASE CONTACT ADMIN!!")
                                             return False
-                                        break
+                                        return True
                             else:
                                 print("Content checking failed")
-                        return [transcript, summary, hid]
+                        self.submitted_video_module(transcript, summary, hid)
                     else:
                         print("This video is not supported. Please try other videos.")
             else:
                 print("Enter valid url")
-        return None
+        return True
 
-    def save_summary(self, transcript, summary, hid):
-        with open(f"downloadable_results/summary_outputs/{hid}_summary.txt", "w") as f:
+    def submitted_video_module(self, transcript, summary, hid):
+        while True:
+            try:
+                ask = int(input(Config.AFTER_SUBMITTING_URL_PROMPT))
+                if ask == int(Config.AFTER_SUBMITTING_URL_PROMPT_LENGTH):
+                    print(Config.EXITING_PROMPT)
+                    break
+                if ask == 1:
+                    self.save_summary(summary, hid)
+                elif ask == 2:
+                    self.save_transcript(transcript, hid)
+                elif ask == 3:
+                    self.show_video_details(transcript, summary, hid)
+                else:
+                    print(Config.INVALID_INPUT_PROMPT)
+            except ValueError:
+                print("Enter Numbers only")
+
+    def save_summary(self, summary, hid):
+        with open(f"downloadable_results/summary_outputs/{hid}_summary.txt", "w", encoding="utf-8") as f:
             f.write(summary)
         logger.info(LogStatements.summary_generated)
         print(f"Summary File Generated with id - {hid}")
 
-    def save_transcript(self, transcript, summary, hid):
-        with open(f"downloadable_results/transcript_outputs/{hid}_transcript.txt", "w") as f:
+    def save_transcript(self, transcript, hid):
+        with open(f"downloadable_results/transcript_outputs/{hid}_transcript.txt", "w", encoding="utf-8") as f:
             f.write(transcript)
         logger.info(LogStatements.transcript_generated)
         print(f"Transcript File Generated with id - {hid}")
@@ -92,4 +117,3 @@ class SubmitVideoOps:
         transcript_word = read_transcript.split()
         summary_word = read_summary.split()
         print(f"Video URLID - {hid}\nTranscript Length - {len(transcript_word)}\nSummary Length - {len(summary_word)}")
-

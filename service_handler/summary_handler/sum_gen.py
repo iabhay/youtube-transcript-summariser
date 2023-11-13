@@ -13,8 +13,12 @@ class SummaryGenerator:
     def summary_generator(self, your_input):
         size = len(your_input)
         # define a pipeline for processing str inputs
-        pipeline = oneai.Pipeline(steps=[oneai.skills.Summarize(min_length=size/4, max_length=size/3),])
-        # process the input and store the output
-        output = pipeline.run(your_input)
-        # print the summary
-        return output.summary.text
+        try:
+            pipeline = oneai.Pipeline(steps=[oneai.skills.Summarize(min_length=size/4, max_length=size/3),])
+            # process the input and store the output
+            output = pipeline.run(your_input)
+            # print the summary
+            return output.summary.text
+        except Exception:
+            print("Summary Generation Failed. Try Again!")
+            return None

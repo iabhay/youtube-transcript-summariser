@@ -6,6 +6,7 @@ from utils.input_validator import url_validation
 from config.log_config.log_config import LogStatements
 logger = logging.getLogger('non_premium_user')
 
+
 class PremiumUserController:
     def __init__(self, uid):
         self.uid = uid
@@ -37,6 +38,7 @@ class PremiumUserController:
             return None
         else:
             print("Enter valid url.")
+
     def view_my_premium_listing(self):
         self.premium_obj.view_premium_user_listing()
         return None

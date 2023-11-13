@@ -2,11 +2,12 @@ import logging
 from database.db_ops.users_db import UsersDB
 from config.config import Config
 from utils.dicts import NonPremiumMap
-from users.submittedvideo.submitted_video_module import SubmittedVideoController
+from users.submittedvideo.video_service import VideoService
 from users.premium_user.premium_user import PremiumUser
 from utils.exception_handler import handle_exceptions
 from config.log_config.log_config import LogStatements
 logger = logging.getLogger('non_premium_user')
+
 
 class NonPremiumUser:
     def __init__(self, uid):
@@ -15,7 +16,7 @@ class NonPremiumUser:
         self.premium_user = PremiumUser(self.uid)
         self.non_premium_map = NonPremiumMap(uid)
         self.non_premium_menu = self.non_premium_map.non_premium_menu()
-        self.submitted_video_obj = SubmittedVideoController(uid)
+        self.video_obj = VideoService(uid)
 
     # @handle_exceptions
     def non_premium_module(self):
@@ -31,23 +32,17 @@ class NonPremiumUser:
                     break
                 elif 0 < ask <= len(self.non_premium_menu):
                     res = self.non_premium_menu[ask]()
-                    if res == None:
-                        continue
-                    elif res:
-                        # if video is good content then redirect to submitted video functionalities
-                        self.submitted_video_obj.submitted_video_module(res[0], res[1], res[2])
-                        continue
-                    elif res == False:
+                    if res == False:
                         # Role changing
                         if ask == 2:
                             logger.info(LogStatements.user_upgraded_to_premium)
                             return "nonpremium"
                         break
-                    elif res == None:
+                    else:
                         continue
                 else:
                     print(Config.INVALID_INPUT_PROMPT)
                     continue
             except ValueError:
                 print("Numbers only")
-            return None
+        return None
