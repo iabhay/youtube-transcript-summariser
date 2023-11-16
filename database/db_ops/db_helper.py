@@ -33,9 +33,13 @@ class DBHelper:
                 print("No data exists")
             else:
                 table = PrettyTable(table_schema)
-                for row in cursor.fetchall():
-                    table.add_row(row)
-                print(table)
+                rows = cursor.fetchall()
+                if rows is None:
+                    print("No data Exists.")
+                else:
+                    for row in rows:
+                        table.add_row(row)
+                    print(table)
 
     @classmethod
     def delete_data(cls, query: str, value: tuple):

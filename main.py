@@ -38,7 +38,7 @@ class YTTS:
                 else:
                     print(Config.INVALID_INPUT_PROMPT)
             except ValueError:
-                print("Numbers only")
+                print("Enter valid input.")
 
 
 if __name__ == "__main__":

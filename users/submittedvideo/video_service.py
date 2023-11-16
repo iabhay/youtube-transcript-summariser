@@ -51,8 +51,10 @@ class VideoService:
                 else:
                     # transcript generated
                     transcript = self.transcript_obj.format_transcript(self.urlid)
+                    summary = None
                     # summary generated from transcript
-                    summary = self.summary_obj.summary_generator(transcript)
+                    if transcript:
+                        summary = self.summary_obj.summary_generator(transcript)
                     if transcript and summary:
                         # if premium listed then no need of content checking
                         if len(check_premium_lisiting) == 0:

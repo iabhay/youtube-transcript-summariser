@@ -33,7 +33,6 @@ class Register:
                     # checking if already registered with username
                     if not self.check_registration(username, hashed_password):
                         self.user.create_user(username, hashed_password)
-                        print("Registered successfully!!")
                         break
 
     def check_registration(self, name, password):

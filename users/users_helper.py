@@ -16,8 +16,6 @@ class UsersHelper:
             if 0 < ask < 3:
                 if ask == 1:
                     self.user.update_user("role", "premiumuser")
-                    logger.info(LogStatements.user_upgraded_to_premium)
-                    print("You are now upgraded to premium.")
                     return False
                 elif ask == 2:
                     print("Back..")
@@ -33,8 +31,6 @@ class UsersHelper:
             if 0 < ask < 3:
                 if ask == 1:
                     self.user.update_user("role", "nonpremiumuser")
-                    logger.info(LogStatements.user_downgraded_to_non_premium)
-                    print("You are downgraded!!")
                     return False
                 elif ask == 2:
                     print("back..")

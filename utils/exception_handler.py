@@ -23,7 +23,6 @@ def handle_exceptions(default_response="Enter Carefully."):
 def db_exception(default_success_response="", default_failure_response=LogStatements.log_exception_message):
     def decorator(func):
         def wrapper(*args, **kwargs):
-            while True:
                 try:
                     # Call the original function
                     logger.info(default_success_response)
