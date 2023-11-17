@@ -9,7 +9,6 @@ class DBInitialise:
     @classmethod
     @db_exception(LogStatements.tables_created, LogStatements.fail_tables_created)
     def create_all_tables(cls) -> None:
-        # try:
         with DatabaseConnection(YTTSDB) as connection:
             cursor = connection.cursor()
             cursor.execute(CreateTablesQuery.query_create_user)
@@ -18,6 +17,3 @@ class DBInitialise:
             cursor.execute(CreateTablesQuery.query_create_ban_url)
             cursor.execute(CreateTablesQuery.query_create_user_search)
             cursor.execute(CreateTablesQuery.query_create_premium_listing)
-        #         logger.info(LogStatements.tables_created)
-        # except Exception as e:
-        #     logger.debug(LogStatements.fail_tables_created)

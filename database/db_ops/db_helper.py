@@ -2,8 +2,11 @@ from prettytable import PrettyTable
 from database.database_connection import DatabaseConnection
 import logging
 from config.log_config.log_config import LogStatements
+from config.config import Config
 logger = logging.getLogger('db_helper')
 YTTSDB = 'YTTSDB.db'
+
+
 class DBHelper:
     @classmethod
     def save_data(cls, query: str, tup: tuple) -> None:
@@ -30,12 +33,12 @@ class DBHelper:
             else:
                 var = cursor.execute(query, value)
             if var is None:
-                print("No data exists")
+                print(Config.NO_DATA_EXIST_PROMPT)
             else:
                 table = PrettyTable(table_schema)
                 rows = cursor.fetchall()
-                if rows is None:
-                    print("No data Exists.")
+                if len(rows) == 0:
+                    print(Config.NO_DATA_EXIST_PROMPT)
                 else:
                     for row in rows:
                         table.add_row(row)

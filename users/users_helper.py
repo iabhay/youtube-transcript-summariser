@@ -22,7 +22,7 @@ class UsersHelper:
             else:
                 print("Enter valid choice.")
         except ValueError:
-            print("Enter Numbers only.")
+            print(Config.VALUE_ERROR_PROMPT)
         return None
 
     def downgrade_to_basic(self):
@@ -37,5 +37,5 @@ class UsersHelper:
             else:
                 print("Enter valid choice.")
         except ValueError:
-            print("Enter Numbers only.")
+            print(Config.VALUE_ERROR_PROMPT)
         return None

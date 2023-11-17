@@ -247,3 +247,67 @@ CONFIRM_PROMPT: |
 CONFIRM_PROMPT_LENGTH: 2
 ADMIN_USERNAME : admin
 ADMIN_PASSWORD : '@Admin1234'
+ROLE_FIELD: role
+ADMIN_ROLE_NAME: admin
+PREMIUM_USER_ROLE_NAME: premiumuser
+NON_PREMIUM_USER_ROLE_NAME: nonpremium
+BAN_STATUS_FIELD_NAME: ban_status
+BANNED_FIELD_NAME: banned
+UNBANNED_FIELD_NAME: unbanned
+UPGRADE_SUCCESS_PROMPT: You are now upgraded to premium!!
+DOWNGRADE_SUCCESS_PROMPT: You are downgraded!!
+REGISTRATION_SUCCESS_PROMPT: Registered successfully!!
+SHORT_UID_CONSTRAINTS: '123456789'
+NO_DATA_EXIST_PROMPT: ------> No data exists <------
+DATE_FORMAT: '%d/%m/%Y %H:%M:%S'
+USER_BANNED_NOTICE_PROMPT: |
+  You have exhausted ban search limits in a day.
+  YOU ARE BANNED.
+  PLEASE CONTACT ADMIN!!
+VIDEO_NOT_SUPPORTED_PROMPT: This video is not supported. Please try other videos.
+ADMIN_UPDATED_MENU: |
+  ------> ADMIN MENU <------
+  1. Manage Users
+  2. Manage URLs
+  3. PremiumListing
+  4. Messages
+  5. History
+  6. Back
+  Enter Choice:
+ADMIN_USER_OPS_MENU: |
+  ------> USER OPS MENU <------
+  1. View User
+  2. View All Users
+  3. Downgrade Premium User
+  4. Ban User
+  5. Unban User
+  6. Back
+  Enter Choice:
+ADMIN_URL_OPS_MENU: |
+  ------> URL OPS MENU <------
+  1. Ban URL
+  2. Unban URL
+  3. Show all banned urls
+  4. Show ban url
+  5. Back
+  Enter Choice:
+ADMIN_PREMIUM_LISTING_OPS_MENU: |
+  ------> PREMIUM LISTING OPS MENU <------
+  1. View Premium Listing of user
+  2. View all Premium Listings
+  3. Unban URL for Premium User
+  4. Back
+  Enter Choice:
+ADMIN_HISTORY_OPS_MENU: |
+  ------> HISTORY OPS MENU <------
+  1. View History of User
+  2. View all History
+  3. Back
+  Enter Choice:
+ADMIN_UPDATED_MENU_LENGTH: 6
+ADMIN_USER_OPS_MENU_LENGTH: 6
+ADMIN_URL_OPS_MENU_LENGTH: 5
+ADMIN_PREMIUM_LISTING_OPS_MENU_LENGTH: 4
+ADMIN_HISTORY_OPS_MENU_LENGTH: 3
+VALUE_ERROR_PROMPT: ----> Numbers only!!
+LISTING_ERROR_PROMPT: ----> Select Listed options only!!

@@ -8,7 +8,6 @@ from database.db_ops.history_db import HistoryDB
 from database.db_ops.premium_listing_db import PremiumListingsDB
 from service_handler.summary_handler.sum_gen import SummaryGenerator
 from config.config import Config
-# from utils.dicts import SubmittedVideo
 from config.log_config.log_config import LogStatements
 logger = logging.getLogger('video_service')
 
@@ -25,8 +24,6 @@ class VideoService:
         self.urlid = ""
         self.history_obj = HistoryDB(self.uid)
         self.transcript = ""
-        # self.submit_obj = SubmittedVideo(uid)
-        # self.submit_menu = self.submit_obj.submit_menu()
 
     def submit_video(self):
         ask = input(Config.SUBMIT_VIDEO_PROMPT)
@@ -43,7 +40,7 @@ class VideoService:
 
                 # checking if url is premium listed
                 premium_list_obj = PremiumListingsDB(self.uid)
-                check_premium_lisiting = premium_list_obj.check_premium_list_url(self.urlid)
+                check_premium_lisiting = premium_list_obj.check_premium_list_url(ask)
 
                 if valid and (len(check_premium_lisiting) == 0):
                     print("Already Banned Url")
@@ -69,13 +66,12 @@ class VideoService:
 
                                         # checking if ban searches limit exceeded, if yes then instant logout
                                         if self.search_count_db.update_user_search_count(3) == False:
-                                            print("You have exhausted ban search limits in a day.\nYOU ARE BANNED. "
-                                                  "PLEASE CONTACT ADMIN!!")
+                                            print(Config.USER_BANNED_NOTICE_PROMPT)
                                             return False
                                         return True
                         self.submitted_video_module(transcript, summary, hid)
                     else:
-                        print("This video is not supported. Please try other videos.")
+                        print(Config.VIDEO_NOT_SUPPORTED_PROMPT)
             else:
                 print("Enter valid url")
         return True
@@ -94,13 +90,14 @@ class VideoService:
                 elif ask == 3:
                     self.show_video_details(transcript, summary, hid)
                 else:
-                    print(Config.INVALID_INPUT_PROMPT)
+                    print(Config.LISTING_ERROR_PROMPT)
             except ValueError:
-                print("Enter Numbers only")
+                print(Config.VALUE_ERROR_PROMPT)
 
     def save_summary(self, summary, hid):
         with open(f"downloadable_results/summary_outputs/{hid}_summary.txt", "w", encoding="utf-8") as f:
-            f.write(summary)
+            lines = summary.split('.')
+            f.writelines(lines)
         logger.info(LogStatements.summary_generated)
         print(f"Summary File Generated with id - {hid}")
 

@@ -59,16 +59,16 @@ class Login:
                     admin = Admin(uid)
                     print("You are logged in!!")
                     # checking if user banned then redirecting to banned module
-                    if entry[0][5] == "banned":
+                    if entry[0][5] == Config.BANNED_FIELD_NAME:
                         m_obj.banned_module()
-                    elif entry[0][4] == "nonpremiumuser" and entry[0][5] == "unbanned":
+                    elif entry[0][4] == Config.NON_PREMIUM_USER_ROLE_NAME:
                         self.res = non_premium_user.non_premium_module()
                         self.login_module()
-                    elif entry[0][4] == "premiumuser" and entry[0][5] == "unbanned":
+                    elif entry[0][4] == Config.PREMIUM_USER_ROLE_NAME:
                         self.res = premium_user.premium_module()
                         self.login_module()
                         # for multiple admins (future purpose only)
-                    elif entry[0][4] == "admin":
+                    elif entry[0][4] == admin:
                         admin.adminmodule()
                         break
                     else:

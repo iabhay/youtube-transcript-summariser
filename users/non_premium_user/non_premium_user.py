@@ -41,8 +41,8 @@ class NonPremiumUser:
                     else:
                         continue
                 else:
-                    print(Config.INVALID_INPUT_PROMPT)
+                    print(Config.LISTING_ERROR_PROMPT)
                     continue
             except ValueError:
-                print("Numbers only")
+                print(Config.VALUE_ERROR_PROMPT)
         return None

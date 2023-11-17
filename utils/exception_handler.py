@@ -27,12 +27,14 @@ def db_exception(default_success_response="", default_failure_response=LogStatem
                     # Call the original function
                     logger.info(default_success_response)
                     return func(*args, **kwargs)
-                except ValueError:
+                except ValueError as e:
                     print("Enter Numbers only.")
+                    logger.info(e)
                 except Exception as e:
                     # Handle the exception and provide the default response
-                    print(f"Exception occurred: {e}")
-                    print(default_failure_response)
-                    logger.debug(default_failure_response)
+                    # print(f"Exception occurred: {e}")
+                    # print(default_failure_response)
+                    print("Something Unexpected Occurred. Our team will look into this.")
+                    logger.debug(e)
         return wrapper
     return decorator

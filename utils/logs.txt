@@ -764,3 +764,390 @@ Response headers:
 2023-11-16 16:15:47,689 INFO     [login.py:51] Invalid login occurred
 2023-11-16 17:48:12,173 INFO     [main.py:24] Starting with Youtube Transcript Summariser.
 2023-11-16 17:48:19,192 INFO     [exception_handler.py:28] 
+2023-11-17 10:55:35,737 INFO     [main.py:24] Starting with Youtube Transcript Summariser.
+2023-11-17 10:56:02,864 INFO     [exception_handler.py:28] 
+2023-11-17 10:56:02,909 INFO     [exception_handler.py:28] None
+2023-11-17 10:56:15,806 INFO     [exception_handler.py:28] 
+2023-11-17 10:56:18,759 INFO     [users_db.py:44] User upgraded to premium
+2023-11-17 10:56:18,759 INFO     [non_premium_user.py:38] User upgraded to premium
+2023-11-17 10:56:22,374 INFO     [exception_handler.py:28] 
+2023-11-17 10:56:26,412 INFO     [exception_handler.py:28] 
+2023-11-17 10:57:13,754 INFO     [main.py:24] Starting with Youtube Transcript Summariser.
+2023-11-17 10:57:24,665 INFO     [exception_handler.py:28] 
+2023-11-17 10:57:37,348 INFO     [exception_handler.py:28] 
+2023-11-17 10:57:40,004 INFO     [exception_handler.py:28] 
+2023-11-17 11:39:57,868 INFO     [main.py:24] Starting with Youtube Transcript Summariser.
+2023-11-17 11:40:08,198 INFO     [exception_handler.py:28] 
+2023-11-17 11:40:08,201 INFO     [login.py:51] Invalid login occurred
+2023-11-17 11:40:19,204 INFO     [exception_handler.py:28] 
+2023-11-17 11:40:19,204 INFO     [exception_handler.py:28] 
+2023-11-17 11:40:19,204 INFO     [exception_handler.py:28] 
+2023-11-17 11:40:19,208 INFO     [exception_handler.py:28] 
+2023-11-17 11:40:19,208 INFO     [exception_handler.py:28] 
+2023-11-17 11:40:19,211 INFO     [exception_handler.py:28] 
+2023-11-17 11:40:19,211 INFO     [exception_handler.py:28] 
+2023-11-17 11:41:30,219 INFO     [exception_handler.py:28] None
+2023-11-17 11:41:30,219 DEBUG    [exception_handler.py:38] 'int' object is not iterable
+2023-11-17 11:41:30,220 INFO     [exception_handler.py:28] 
+2023-11-17 11:41:30,220 INFO     [exception_handler.py:28] 
+2023-11-17 11:41:30,227 DEBUG    [connectionpool.py:1048] Starting new HTTPS connection (1): www.youtube.com:443
+2023-11-17 11:41:32,119 DEBUG    [connectionpool.py:546] https://www.youtube.com:443 "GET /watch?v=KgA2TpKJC30 HTTP/1.1" 200 None
+2023-11-17 11:41:33,289 DEBUG    [connectionpool.py:1048] Starting new HTTPS connection (1): www.youtube.com:443
+2023-11-17 11:41:34,631 DEBUG    [connectionpool.py:546] https://www.youtube.com:443 "GET /api/timedtext?v=KgA2TpKJC30&ei=EwRXZb3TOpiz8wTn7qPQDw&caps=asr&opi=112496729&xoaf=5&hl=en&ip=0.0.0.0&ipbits=0&expire=1700226691&sparams=ip,ipbits,expire,v,ei,caps,opi,xoaf&signature=67966F21D8C19618F9809EA8559679E6FC911826.541405966A881545E05A04F26FEEF031D2F68970&key=yt8&lang=en HTTP/1.1" 200 None
+2023-11-17 11:41:34,647 DEBUG    [selector_events.py:54] Using selector: SelectSelector
+2023-11-17 11:41:38,105 INFO     [_universal.py:511] Request URL: 'https://youtube-transcript-summariser.cognitiveservices.azure.com//contentsafety/text:analyze?api-version=REDACTED'
+Request method: 'POST'
+Request headers:
+    'Content-Type': 'application/json'
+    'Content-Length': '747'
+    'Accept': 'application/json'
+    'x-ms-client-request-id': '2aea9993-8510-11ee-8355-9cb6d0bae4aa'
+    'User-Agent': 'azsdk-python-ai-contentsafety/1.0.0b1 Python/3.11.5 (Windows-10-10.0.22621-SP0)'
+    'Ocp-Apim-Subscription-Key': 'REDACTED'
+A body is sent with the request
+2023-11-17 11:41:38,105 DEBUG    [connectionpool.py:1048] Starting new HTTPS connection (1): youtube-transcript-summariser.cognitiveservices.azure.com:443
+2023-11-17 11:41:42,716 DEBUG    [connectionpool.py:546] https://youtube-transcript-summariser.cognitiveservices.azure.com:443 "POST //contentsafety/text:analyze?api-version=2023-04-30-preview HTTP/1.1" 200 None
+2023-11-17 11:41:42,739 INFO     [_universal.py:550] Response status: 200
+Response headers:
+    'Transfer-Encoding': 'chunked'
+    'Content-Type': 'application/json; charset=utf-8'
+    'csp-billing-usage': 'REDACTED'
+    'api-supported-versions': 'REDACTED'
+    'x-envoy-upstream-service-time': 'REDACTED'
+    'apim-request-id': 'REDACTED'
+    'Strict-Transport-Security': 'REDACTED'
+    'x-content-type-options': 'REDACTED'
+    'x-ms-region': 'REDACTED'
+    'Date': 'Fri, 17 Nov 2023 06:11:41 GMT'
+2023-11-17 11:43:38,904 INFO     [video_service.py:104] Summary file generated
+2023-11-17 11:43:41,072 INFO     [video_service.py:110] Transcript file generated
+2023-11-17 11:44:39,332 INFO     [exception_handler.py:28] None
+2023-11-17 11:44:39,332 DEBUG    [exception_handler.py:38] 'int' object is not iterable
+2023-11-17 11:44:39,347 INFO     [exception_handler.py:28] 
+2023-11-17 11:44:39,349 INFO     [exception_handler.py:28] 
+2023-11-17 11:44:39,349 DEBUG    [connectionpool.py:1048] Starting new HTTPS connection (1): www.youtube.com:443
+2023-11-17 11:44:41,233 DEBUG    [connectionpool.py:546] https://www.youtube.com:443 "GET /watch?v=KgA2TpKJC30 HTTP/1.1" 200 None
+2023-11-17 11:44:42,341 DEBUG    [connectionpool.py:1048] Starting new HTTPS connection (1): www.youtube.com:443
+2023-11-17 11:44:44,195 DEBUG    [connectionpool.py:546] https://www.youtube.com:443 "GET /api/timedtext?v=KgA2TpKJC30&ei=0QRXZdHBBMnN8wTKwJbYBA&caps=asr&opi=112496729&xoaf=5&hl=en&ip=0.0.0.0&ipbits=0&expire=1700226881&sparams=ip,ipbits,expire,v,ei,caps,opi,xoaf&signature=259B8BF26FB1BD82B1B6A08AE42C0890E226E411.338566168136236C0745B609AC7594CD262591EE&key=yt8&lang=en HTTP/1.1" 200 None
+2023-11-17 11:44:44,195 DEBUG    [selector_events.py:54] Using selector: SelectSelector
+2023-11-17 11:44:46,875 INFO     [_universal.py:511] Request URL: 'https://youtube-transcript-summariser.cognitiveservices.azure.com//contentsafety/text:analyze?api-version=REDACTED'
+Request method: 'POST'
+Request headers:
+    'Content-Type': 'application/json'
+    'Content-Length': '747'
+    'Accept': 'application/json'
+    'x-ms-client-request-id': '9b6ea62f-8510-11ee-b578-9cb6d0bae4aa'
+    'User-Agent': 'azsdk-python-ai-contentsafety/1.0.0b1 Python/3.11.5 (Windows-10-10.0.22621-SP0)'
+    'Ocp-Apim-Subscription-Key': 'REDACTED'
+A body is sent with the request
+2023-11-17 11:44:46,875 DEBUG    [connectionpool.py:1048] Starting new HTTPS connection (1): youtube-transcript-summariser.cognitiveservices.azure.com:443
+2023-11-17 11:44:51,267 DEBUG    [connectionpool.py:546] https://youtube-transcript-summariser.cognitiveservices.azure.com:443 "POST //contentsafety/text:analyze?api-version=2023-04-30-preview HTTP/1.1" 200 None
+2023-11-17 11:44:51,267 INFO     [_universal.py:550] Response status: 200
+Response headers:
+    'Transfer-Encoding': 'chunked'
+    'Content-Type': 'application/json; charset=utf-8'
+    'csp-billing-usage': 'REDACTED'
+    'api-supported-versions': 'REDACTED'
+    'x-envoy-upstream-service-time': 'REDACTED'
+    'apim-request-id': 'REDACTED'
+    'Strict-Transport-Security': 'REDACTED'
+    'x-content-type-options': 'REDACTED'
+    'x-ms-region': 'REDACTED'
+    'Date': 'Fri, 17 Nov 2023 06:14:50 GMT'
+2023-11-17 11:45:18,894 INFO     [video_service.py:104] Summary file generated
+2023-11-17 11:45:19,834 INFO     [video_service.py:110] Transcript file generated
+2023-11-17 11:46:06,213 INFO     [main.py:24] Starting with Youtube Transcript Summariser.
+2023-11-17 11:46:15,137 INFO     [exception_handler.py:28] 
+2023-11-17 11:46:15,145 INFO     [exception_handler.py:28] 
+2023-11-17 11:46:15,147 INFO     [exception_handler.py:28] 
+2023-11-17 11:46:15,147 INFO     [exception_handler.py:28] 
+2023-11-17 11:46:15,150 INFO     [exception_handler.py:28] 
+2023-11-17 11:46:15,150 INFO     [exception_handler.py:28] 
+2023-11-17 11:46:15,150 INFO     [exception_handler.py:28] 
+2023-11-17 11:46:17,596 INFO     [exception_handler.py:28] None
+2023-11-17 11:46:17,603 DEBUG    [exception_handler.py:38] 'int' object is not iterable
+2023-11-17 11:46:17,603 INFO     [exception_handler.py:28] 
+2023-11-17 11:46:17,603 INFO     [exception_handler.py:28] 
+2023-11-17 11:46:17,607 DEBUG    [connectionpool.py:1048] Starting new HTTPS connection (1): www.youtube.com:443
+2023-11-17 11:46:19,053 DEBUG    [connectionpool.py:546] https://www.youtube.com:443 "GET /watch?v=KgA2TpKJC30 HTTP/1.1" 200 None
+2023-11-17 11:46:20,122 DEBUG    [connectionpool.py:1048] Starting new HTTPS connection (1): www.youtube.com:443
+2023-11-17 11:46:21,411 DEBUG    [connectionpool.py:546] https://www.youtube.com:443 "GET /api/timedtext?v=KgA2TpKJC30&ei=MgVXZeDMNtj6zLUPs9aywAU&caps=asr&opi=112496729&xoaf=5&hl=en&ip=0.0.0.0&ipbits=0&expire=1700226978&sparams=ip,ipbits,expire,v,ei,caps,opi,xoaf&signature=99A16B79F77571190F584AB1AB8E022867E94E31.ECB89E7915E634CBB7A371203A6481D4DA234532&key=yt8&lang=en HTTP/1.1" 200 None
+2023-11-17 11:46:21,426 DEBUG    [selector_events.py:54] Using selector: SelectSelector
+2023-11-17 11:46:24,617 INFO     [_universal.py:511] Request URL: 'https://youtube-transcript-summariser.cognitiveservices.azure.com//contentsafety/text:analyze?api-version=REDACTED'
+Request method: 'POST'
+Request headers:
+    'Content-Type': 'application/json'
+    'Content-Length': '747'
+    'Accept': 'application/json'
+    'x-ms-client-request-id': 'd5b0e3d2-8510-11ee-b907-9cb6d0bae4aa'
+    'User-Agent': 'azsdk-python-ai-contentsafety/1.0.0b1 Python/3.11.5 (Windows-10-10.0.22621-SP0)'
+    'Ocp-Apim-Subscription-Key': 'REDACTED'
+A body is sent with the request
+2023-11-17 11:46:24,617 DEBUG    [connectionpool.py:1048] Starting new HTTPS connection (1): youtube-transcript-summariser.cognitiveservices.azure.com:443
+2023-11-17 11:46:28,177 DEBUG    [connectionpool.py:546] https://youtube-transcript-summariser.cognitiveservices.azure.com:443 "POST //contentsafety/text:analyze?api-version=2023-04-30-preview HTTP/1.1" 200 None
+2023-11-17 11:46:28,191 INFO     [_universal.py:550] Response status: 200
+Response headers:
+    'Transfer-Encoding': 'chunked'
+    'Content-Type': 'application/json; charset=utf-8'
+    'csp-billing-usage': 'REDACTED'
+    'api-supported-versions': 'REDACTED'
+    'x-envoy-upstream-service-time': 'REDACTED'
+    'apim-request-id': 'REDACTED'
+    'Strict-Transport-Security': 'REDACTED'
+    'x-content-type-options': 'REDACTED'
+    'x-ms-region': 'REDACTED'
+    'Date': 'Fri, 17 Nov 2023 06:16:27 GMT'
+2023-11-17 11:47:25,284 INFO     [main.py:24] Starting with Youtube Transcript Summariser.
+2023-11-17 11:47:33,434 INFO     [exception_handler.py:28] 
+2023-11-17 11:47:33,436 INFO     [login.py:51] Invalid login occurred
+2023-11-17 11:47:41,420 INFO     [exception_handler.py:28] 
+2023-11-17 11:47:41,423 INFO     [exception_handler.py:28] 
+2023-11-17 11:47:41,423 INFO     [exception_handler.py:28] 
+2023-11-17 11:47:41,423 INFO     [exception_handler.py:28] 
+2023-11-17 11:47:41,423 INFO     [exception_handler.py:28] 
+2023-11-17 11:47:41,429 INFO     [exception_handler.py:28] 
+2023-11-17 11:47:41,429 INFO     [exception_handler.py:28] 
+2023-11-17 11:47:43,612 INFO     [exception_handler.py:28] None
+2023-11-17 11:47:43,612 DEBUG    [exception_handler.py:38] 'int' object is not iterable
+2023-11-17 11:47:43,628 INFO     [exception_handler.py:28] 
+2023-11-17 11:47:43,628 INFO     [exception_handler.py:28] 
+2023-11-17 11:47:43,628 DEBUG    [connectionpool.py:1048] Starting new HTTPS connection (1): www.youtube.com:443
+2023-11-17 11:47:45,113 DEBUG    [connectionpool.py:546] https://www.youtube.com:443 "GET /watch?v=KgA2TpKJC30 HTTP/1.1" 200 None
+2023-11-17 11:47:46,589 DEBUG    [connectionpool.py:1048] Starting new HTTPS connection (1): www.youtube.com:443
+2023-11-17 11:47:48,057 DEBUG    [connectionpool.py:546] https://www.youtube.com:443 "GET /api/timedtext?v=KgA2TpKJC30&ei=iAVXZbehOs2Q_9EPg7qY0Ao&caps=asr&opi=112496729&xoaf=5&hl=en&ip=0.0.0.0&ipbits=0&expire=1700227065&sparams=ip,ipbits,expire,v,ei,caps,opi,xoaf&signature=D8A95678FD8FED5665376E37FDE536E439359DC3.61505154167A6A3A4F9B06289902B82EFF617112&key=yt8&lang=en HTTP/1.1" 200 None
+2023-11-17 11:47:48,073 DEBUG    [selector_events.py:54] Using selector: SelectSelector
+2023-11-17 11:47:50,923 INFO     [_universal.py:511] Request URL: 'https://youtube-transcript-summariser.cognitiveservices.azure.com//contentsafety/text:analyze?api-version=REDACTED'
+Request method: 'POST'
+Request headers:
+    'Content-Type': 'application/json'
+    'Content-Length': '747'
+    'Accept': 'application/json'
+    'x-ms-client-request-id': '092217a5-8511-11ee-b799-9cb6d0bae4aa'
+    'User-Agent': 'azsdk-python-ai-contentsafety/1.0.0b1 Python/3.11.5 (Windows-10-10.0.22621-SP0)'
+    'Ocp-Apim-Subscription-Key': 'REDACTED'
+A body is sent with the request
+2023-11-17 11:47:50,923 DEBUG    [connectionpool.py:1048] Starting new HTTPS connection (1): youtube-transcript-summariser.cognitiveservices.azure.com:443
+2023-11-17 11:47:53,884 DEBUG    [connectionpool.py:546] https://youtube-transcript-summariser.cognitiveservices.azure.com:443 "POST //contentsafety/text:analyze?api-version=2023-04-30-preview HTTP/1.1" 200 None
+2023-11-17 11:47:53,884 INFO     [_universal.py:550] Response status: 200
+Response headers:
+    'Transfer-Encoding': 'chunked'
+    'Content-Type': 'application/json; charset=utf-8'
+    'csp-billing-usage': 'REDACTED'
+    'api-supported-versions': 'REDACTED'
+    'x-envoy-upstream-service-time': 'REDACTED'
+    'apim-request-id': 'REDACTED'
+    'Strict-Transport-Security': 'REDACTED'
+    'x-content-type-options': 'REDACTED'
+    'x-ms-region': 'REDACTED'
+    'Date': 'Fri, 17 Nov 2023 06:17:53 GMT'
+2023-11-17 11:48:24,352 INFO     [main.py:24] Starting with Youtube Transcript Summariser.
+2023-11-17 11:48:43,132 INFO     [main.py:24] Starting with Youtube Transcript Summariser.
+2023-11-17 11:48:55,977 INFO     [exception_handler.py:28] 
+2023-11-17 11:48:55,993 INFO     [exception_handler.py:28] 
+2023-11-17 11:48:55,993 INFO     [exception_handler.py:28] 
+2023-11-17 11:48:55,993 INFO     [exception_handler.py:28] 
+2023-11-17 11:48:55,993 INFO     [exception_handler.py:28] 
+2023-11-17 11:48:55,993 INFO     [exception_handler.py:28] 
+2023-11-17 11:48:55,993 INFO     [exception_handler.py:28] 
+2023-11-17 11:48:58,208 INFO     [exception_handler.py:28] None
+2023-11-17 11:48:58,221 INFO     [exception_handler.py:28] 
+2023-11-17 11:48:58,221 INFO     [exception_handler.py:28] 
+2023-11-17 11:48:58,231 DEBUG    [connectionpool.py:1048] Starting new HTTPS connection (1): www.youtube.com:443
+2023-11-17 11:49:01,590 DEBUG    [connectionpool.py:546] https://www.youtube.com:443 "GET /watch?v=KgA2TpKJC30 HTTP/1.1" 200 None
+2023-11-17 11:49:02,885 DEBUG    [connectionpool.py:1048] Starting new HTTPS connection (1): www.youtube.com:443
+2023-11-17 11:49:04,307 DEBUG    [connectionpool.py:546] https://www.youtube.com:443 "GET /api/timedtext?v=KgA2TpKJC30&ei=1QVXZf_BGtem_9EPldaLwAo&caps=asr&opi=112496729&xoaf=5&hl=en&ip=0.0.0.0&ipbits=0&expire=1700227141&sparams=ip,ipbits,expire,v,ei,caps,opi,xoaf&signature=6225A2A21A640F917566D085E8FEE8EF14CD2561.1D3AC96354A7BC72F89E9416604CCE8FE9AFEC14&key=yt8&lang=en HTTP/1.1" 200 None
+2023-11-17 11:49:04,307 DEBUG    [selector_events.py:54] Using selector: SelectSelector
+2023-11-17 11:49:07,416 INFO     [_universal.py:511] Request URL: 'https://youtube-transcript-summariser.cognitiveservices.azure.com//contentsafety/text:analyze?api-version=REDACTED'
+Request method: 'POST'
+Request headers:
+    'Content-Type': 'application/json'
+    'Content-Length': '747'
+    'Accept': 'application/json'
+    'x-ms-client-request-id': '36ba0a39-8511-11ee-8714-9cb6d0bae4aa'
+    'User-Agent': 'azsdk-python-ai-contentsafety/1.0.0b1 Python/3.11.5 (Windows-10-10.0.22621-SP0)'
+    'Ocp-Apim-Subscription-Key': 'REDACTED'
+A body is sent with the request
+2023-11-17 11:49:07,424 DEBUG    [connectionpool.py:1048] Starting new HTTPS connection (1): youtube-transcript-summariser.cognitiveservices.azure.com:443
+2023-11-17 11:49:11,869 DEBUG    [connectionpool.py:546] https://youtube-transcript-summariser.cognitiveservices.azure.com:443 "POST //contentsafety/text:analyze?api-version=2023-04-30-preview HTTP/1.1" 200 None
+2023-11-17 11:49:11,869 INFO     [_universal.py:550] Response status: 200
+Response headers:
+    'Transfer-Encoding': 'chunked'
+    'Content-Type': 'application/json; charset=utf-8'
+    'csp-billing-usage': 'REDACTED'
+    'api-supported-versions': 'REDACTED'
+    'x-envoy-upstream-service-time': 'REDACTED'
+    'apim-request-id': 'REDACTED'
+    'Strict-Transport-Security': 'REDACTED'
+    'x-content-type-options': 'REDACTED'
+    'x-ms-region': 'REDACTED'
+    'Date': 'Fri, 17 Nov 2023 06:19:10 GMT'
+2023-11-17 11:49:14,701 INFO     [video_service.py:104] Summary file generated
+2023-11-17 11:49:15,629 INFO     [video_service.py:110] Transcript file generated
+2023-11-17 13:23:39,017 INFO     [main.py:24] Starting with Youtube Transcript Summariser.
+2023-11-17 13:41:43,303 INFO     [exception_handler.py:28] 
+2023-11-17 13:41:43,318 INFO     [exception_handler.py:28] None
+2023-11-17 13:42:21,983 INFO     [exception_handler.py:28] 
+2023-11-17 13:42:21,983 INFO     [login.py:51] Invalid login occurred
+2023-11-17 13:42:38,735 INFO     [exception_handler.py:28] 
+2023-11-17 13:42:38,735 INFO     [exception_handler.py:28] 
+2023-11-17 13:42:38,735 INFO     [exception_handler.py:28] 
+2023-11-17 13:42:38,735 INFO     [exception_handler.py:28] 
+2023-11-17 13:42:38,735 INFO     [exception_handler.py:28] 
+2023-11-17 13:42:38,735 INFO     [exception_handler.py:28] 
+2023-11-17 13:42:38,735 INFO     [exception_handler.py:28] 
+2023-11-17 13:43:31,434 INFO     [exception_handler.py:28] None
+2023-11-17 13:43:31,446 INFO     [exception_handler.py:28] 
+2023-11-17 13:43:31,446 INFO     [exception_handler.py:28] 
+2023-11-17 13:43:31,456 DEBUG    [connectionpool.py:1048] Starting new HTTPS connection (1): www.youtube.com:443
+2023-11-17 13:43:33,909 DEBUG    [connectionpool.py:546] https://www.youtube.com:443 "GET /watch?v=k8jw3JVfK0w HTTP/1.1" 200 None
+2023-11-17 13:44:15,589 INFO     [exception_handler.py:28] None
+2023-11-17 13:44:15,596 INFO     [exception_handler.py:28] 
+2023-11-17 13:44:15,604 INFO     [exception_handler.py:28] 
+2023-11-17 13:44:15,604 DEBUG    [connectionpool.py:1048] Starting new HTTPS connection (1): www.youtube.com:443
+2023-11-17 13:44:17,999 DEBUG    [connectionpool.py:546] https://www.youtube.com:443 "GET /watch?v=Q6M255BZ0HU HTTP/1.1" 200 None
+2023-11-17 13:44:19,131 DEBUG    [connectionpool.py:1048] Starting new HTTPS connection (1): www.youtube.com:443
+2023-11-17 13:44:20,454 DEBUG    [connectionpool.py:546] https://www.youtube.com:443 "GET /api/timedtext?v=Q6M255BZ0HU&ei=2SBXZaPUMtyp_9EPvJKSiAY&caps=asr&opi=112496729&xoaf=4&hl=en&ip=0.0.0.0&ipbits=0&expire=1700234057&sparams=ip,ipbits,expire,v,ei,caps,opi,xoaf&signature=226D9890E5721315D1DF7A01EFFBBB9259F2D354.EDCF699720EA3415B8F431A6EFDAD0845AC1C08C&key=yt8&kind=asr&lang=en HTTP/1.1" 200 None
+2023-11-17 13:44:20,486 DEBUG    [selector_events.py:54] Using selector: SelectSelector
+2023-11-17 13:44:38,492 INFO     [_universal.py:511] Request URL: 'https://youtube-transcript-summariser.cognitiveservices.azure.com//contentsafety/text:analyze?api-version=REDACTED'
+Request method: 'POST'
+Request headers:
+    'Content-Type': 'application/json'
+    'Content-Length': '5038'
+    'Accept': 'application/json'
+    'x-ms-client-request-id': '59f83f36-8521-11ee-ac6c-9cb6d0bae4aa'
+    'User-Agent': 'azsdk-python-ai-contentsafety/1.0.0b1 Python/3.11.5 (Windows-10-10.0.22621-SP0)'
+    'Ocp-Apim-Subscription-Key': 'REDACTED'
+A body is sent with the request
+2023-11-17 13:44:38,492 DEBUG    [connectionpool.py:1048] Starting new HTTPS connection (1): youtube-transcript-summariser.cognitiveservices.azure.com:443
+2023-11-17 13:44:42,193 DEBUG    [connectionpool.py:546] https://youtube-transcript-summariser.cognitiveservices.azure.com:443 "POST //contentsafety/text:analyze?api-version=2023-04-30-preview HTTP/1.1" 200 None
+2023-11-17 13:44:42,216 INFO     [_universal.py:550] Response status: 200
+Response headers:
+    'Transfer-Encoding': 'chunked'
+    'Content-Type': 'application/json; charset=utf-8'
+    'csp-billing-usage': 'REDACTED'
+    'api-supported-versions': 'REDACTED'
+    'x-envoy-upstream-service-time': 'REDACTED'
+    'apim-request-id': 'REDACTED'
+    'Strict-Transport-Security': 'REDACTED'
+    'x-content-type-options': 'REDACTED'
+    'x-ms-region': 'REDACTED'
+    'Date': 'Fri, 17 Nov 2023 08:14:41 GMT'
+2023-11-17 13:44:42,227 INFO     [exception_handler.py:28] None
+2023-11-17 13:44:42,227 INFO     [exception_handler.py:28] 
+2023-11-17 13:44:42,251 INFO     [exception_handler.py:28] None
+2023-11-17 13:44:42,251 INFO     [exception_handler.py:28] 
+2023-11-17 13:45:36,678 INFO     [exception_handler.py:28] None
+2023-11-17 13:45:36,706 INFO     [exception_handler.py:28] 
+2023-11-17 13:45:36,706 INFO     [exception_handler.py:28] 
+2023-11-17 13:45:48,609 INFO     [exception_handler.py:28] None
+2023-11-17 13:45:48,627 INFO     [users_db.py:40] User upgraded to premium
+2023-11-17 13:45:48,627 INFO     [non_premium_user.py:38] User upgraded to premium
+2023-11-17 13:45:48,627 INFO     [exception_handler.py:28] 
+2023-11-17 13:45:48,627 INFO     [exception_handler.py:28] 
+2023-11-17 13:47:10,302 INFO     [exception_handler.py:28] None
+2023-11-17 13:47:10,322 INFO     [exception_handler.py:28] 
+2023-11-17 13:47:10,326 INFO     [exception_handler.py:28] 
+2023-11-17 13:47:10,330 DEBUG    [connectionpool.py:1048] Starting new HTTPS connection (1): www.youtube.com:443
+2023-11-17 13:47:12,888 DEBUG    [connectionpool.py:546] https://www.youtube.com:443 "GET /watch?v=gCNeDWCI0vo HTTP/1.1" 200 None
+2023-11-17 13:48:00,541 INFO     [exception_handler.py:28] None
+2023-11-17 13:48:00,560 INFO     [premium_user_controller.py:24] Premium user requested for premium listing
+2023-11-17 13:48:14,495 INFO     [exception_handler.py:28] 
+2023-11-17 13:48:19,686 INFO     [exception_handler.py:28] 
+2023-11-17 13:49:18,175 INFO     [premium_user.py:27] Premium user logged out
+2023-11-17 13:49:18,175 INFO     [login.py:80] User exited from app
+2023-11-17 13:51:34,794 INFO     [exception_handler.py:28] None
+2023-11-17 13:51:34,811 INFO     [admincontroller.py:85] Admin unbanned user
+2023-11-17 13:52:35,689 INFO     [exception_handler.py:28] 
+2023-11-17 13:53:57,065 INFO     [exception_handler.py:28] 
+2023-11-17 13:53:57,065 INFO     [exception_handler.py:28] None
+2023-11-17 13:53:57,065 INFO     [exception_handler.py:28] 
+2023-11-17 13:53:57,091 INFO     [admincontroller.py:134] Admin premium listed url
+2023-11-17 13:54:28,248 INFO     [exception_handler.py:28] 
+2023-11-17 13:54:28,248 INFO     [exception_handler.py:28] 
+2023-11-17 13:54:28,248 INFO     [exception_handler.py:28] 
+2023-11-17 13:54:28,248 INFO     [exception_handler.py:28] 
+2023-11-17 13:54:28,255 INFO     [exception_handler.py:28] 
+2023-11-17 13:54:28,256 INFO     [exception_handler.py:28] 
+2023-11-17 13:54:28,256 INFO     [exception_handler.py:28] 
+2023-11-17 13:54:32,328 INFO     [exception_handler.py:28] None
+2023-11-17 13:54:32,358 INFO     [exception_handler.py:28] 
+2023-11-17 13:54:32,360 INFO     [exception_handler.py:28] 
+2023-11-17 13:54:44,132 INFO     [exception_handler.py:28] None
+2023-11-17 13:54:44,142 INFO     [exception_handler.py:28] 
+2023-11-17 13:54:44,142 INFO     [exception_handler.py:28] 
+2023-11-17 13:54:52,446 INFO     [exception_handler.py:28] 
+2023-11-17 13:55:27,899 INFO     [exception_handler.py:28] None
+2023-11-17 13:55:27,911 INFO     [exception_handler.py:28] 
+2023-11-17 13:55:27,911 INFO     [exception_handler.py:28] 
+2023-11-17 14:02:32,869 INFO     [main.py:24] Starting with Youtube Transcript Summariser.
+2023-11-17 14:02:48,181 INFO     [exception_handler.py:28] 
+2023-11-17 14:02:48,187 INFO     [exception_handler.py:28] 
+2023-11-17 14:02:48,187 INFO     [exception_handler.py:28] 
+2023-11-17 14:02:48,187 INFO     [exception_handler.py:28] 
+2023-11-17 14:02:48,187 INFO     [exception_handler.py:28] 
+2023-11-17 14:02:48,187 INFO     [exception_handler.py:28] 
+2023-11-17 14:02:48,187 INFO     [exception_handler.py:28] 
+2023-11-17 14:02:58,303 INFO     [exception_handler.py:28] None
+2023-11-17 14:02:58,317 INFO     [exception_handler.py:28] 
+2023-11-17 14:02:58,317 INFO     [exception_handler.py:28] 
+2023-11-17 14:02:58,317 DEBUG    [connectionpool.py:1048] Starting new HTTPS connection (1): www.youtube.com:443
+2023-11-17 14:03:01,560 DEBUG    [connectionpool.py:546] https://www.youtube.com:443 "GET /watch?v=Q6M255BZ0HU HTTP/1.1" 200 None
+2023-11-17 14:03:02,891 DEBUG    [connectionpool.py:1048] Starting new HTTPS connection (1): www.youtube.com:443
+2023-11-17 14:03:04,210 DEBUG    [connectionpool.py:546] https://www.youtube.com:443 "GET /api/timedtext?v=Q6M255BZ0HU&ei=PSVXZfmUGJSP_9EPw52oaA&caps=asr&opi=112496729&xoaf=4&hl=en&ip=0.0.0.0&ipbits=0&expire=1700235181&sparams=ip,ipbits,expire,v,ei,caps,opi,xoaf&signature=7A365D9A88F19196579AC5DE162083837068D043.6850AC2C6C059266250917483777C7CC9ED5CA70&key=yt8&kind=asr&lang=en HTTP/1.1" 200 None
+2023-11-17 14:03:04,226 DEBUG    [selector_events.py:54] Using selector: SelectSelector
+2023-11-17 14:03:25,872 INFO     [video_service.py:100] Summary file generated
+2023-11-17 14:03:26,875 INFO     [video_service.py:106] Transcript file generated
+2023-11-17 14:41:05,621 INFO     [main.py:24] Starting with Youtube Transcript Summariser.
+2023-11-17 14:42:54,914 INFO     [main.py:24] Starting with Youtube Transcript Summariser.
+2023-11-17 14:43:15,939 INFO     [main.py:24] Starting with Youtube Transcript Summariser.
+2023-11-17 14:56:02,778 INFO     [main.py:24] Starting with Youtube Transcript Summariser.
+2023-11-17 15:07:44,520 INFO     [main.py:24] Starting with Youtube Transcript Summariser.
+2023-11-17 15:08:35,548 INFO     [exception_handler.py:28] 
+2023-11-17 15:08:42,509 INFO     [exception_handler.py:28] 
+2023-11-17 15:08:55,080 INFO     [exception_handler.py:28] 
+2023-11-17 15:08:55,080 INFO     [login.py:51] Invalid login occurred
+2023-11-17 15:09:25,810 INFO     [exception_handler.py:28] 
+2023-11-17 15:09:25,810 INFO     [exception_handler.py:28] 
+2023-11-17 15:09:25,810 INFO     [exception_handler.py:28] 
+2023-11-17 15:09:25,810 INFO     [exception_handler.py:28] 
+2023-11-17 15:09:25,810 INFO     [exception_handler.py:28] 
+2023-11-17 15:09:25,810 INFO     [exception_handler.py:28] 
+2023-11-17 15:09:25,826 INFO     [exception_handler.py:28] 
+2023-11-17 15:09:50,764 INFO     [exception_handler.py:28] None
+2023-11-17 15:09:50,796 INFO     [exception_handler.py:28] 
+2023-11-17 15:09:50,802 INFO     [exception_handler.py:28] 
+2023-11-17 15:09:50,804 DEBUG    [connectionpool.py:1048] Starting new HTTPS connection (1): www.youtube.com:443
+2023-11-17 15:09:52,557 DEBUG    [connectionpool.py:546] https://www.youtube.com:443 "GET /watch?v=Q6M255BZ0HU HTTP/1.1" 200 None
+2023-11-17 15:09:53,648 DEBUG    [connectionpool.py:1048] Starting new HTTPS connection (1): www.youtube.com:443
+2023-11-17 15:09:54,985 DEBUG    [connectionpool.py:546] https://www.youtube.com:443 "GET /api/timedtext?v=Q6M255BZ0HU&ei=6DRXZbqCGMij_9EP8ZKpmAs&caps=asr&opi=112496729&xoaf=4&hl=en&ip=0.0.0.0&ipbits=0&expire=1700239192&sparams=ip,ipbits,expire,v,ei,caps,opi,xoaf&signature=A4117957760E6C268AD347D9AA3258E3BA7148DA.EDBC8DF86810FC9D47CB9F7CC84025408FD6BD48&key=yt8&kind=asr&lang=en HTTP/1.1" 200 None
+2023-11-17 15:09:55,000 DEBUG    [selector_events.py:54] Using selector: SelectSelector
+2023-11-17 15:10:17,552 INFO     [video_service.py:100] Summary file generated
+2023-11-17 15:12:24,602 INFO     [exception_handler.py:28] 
+2023-11-17 15:12:25,906 INFO     [premium_user.py:27] Premium user logged out
+2023-11-17 15:12:25,906 INFO     [login.py:80] User exited from app
+2023-11-17 15:12:34,780 INFO     [main.py:24] Starting with Youtube Transcript Summariser.
+2023-11-17 15:12:51,940 INFO     [exception_handler.py:28] 
+2023-11-17 15:12:51,955 INFO     [exception_handler.py:28] 
+2023-11-17 15:12:51,956 INFO     [exception_handler.py:28] 
+2023-11-17 15:12:51,958 INFO     [exception_handler.py:28] 
+2023-11-17 15:12:51,958 INFO     [exception_handler.py:28] 
+2023-11-17 15:12:51,958 INFO     [exception_handler.py:28] 
+2023-11-17 15:12:51,958 INFO     [exception_handler.py:28] 
+2023-11-17 15:13:13,262 INFO     [main.py:24] Starting with Youtube Transcript Summariser.
+2023-11-17 15:13:26,813 INFO     [exception_handler.py:28] 
+2023-11-17 15:13:26,828 INFO     [exception_handler.py:28] 
+2023-11-17 15:13:26,828 INFO     [exception_handler.py:28] 
+2023-11-17 15:13:26,828 INFO     [exception_handler.py:28] 
+2023-11-17 15:13:26,828 INFO     [exception_handler.py:28] 
+2023-11-17 15:13:26,834 INFO     [exception_handler.py:28] 
+2023-11-17 15:13:26,834 INFO     [exception_handler.py:28] 
+2023-11-17 15:13:29,279 INFO     [exception_handler.py:28] 
+2023-11-17 15:13:39,697 INFO     [exception_handler.py:28] None
+2023-11-17 15:13:39,729 INFO     [exception_handler.py:28] 
+2023-11-17 15:13:39,731 INFO     [exception_handler.py:28] 
+2023-11-17 15:13:39,731 DEBUG    [connectionpool.py:1048] Starting new HTTPS connection (1): www.youtube.com:443
+2023-11-17 15:13:41,036 DEBUG    [connectionpool.py:546] https://www.youtube.com:443 "GET /watch?v=Q6M255BZ0HU HTTP/1.1" 200 None
+2023-11-17 15:13:42,105 DEBUG    [connectionpool.py:1048] Starting new HTTPS connection (1): www.youtube.com:443
+2023-11-17 15:13:43,520 DEBUG    [connectionpool.py:546] https://www.youtube.com:443 "GET /api/timedtext?v=Q6M255BZ0HU&ei=zDVXZZemNcn18gS_qLXQBA&caps=asr&opi=112496729&xoaf=4&hl=en&ip=0.0.0.0&ipbits=0&expire=1700239420&sparams=ip,ipbits,expire,v,ei,caps,opi,xoaf&signature=396B3CE2EA51E47B667FD186A02490BA4DCE5F6E.D1E9D55DC36EC22D50B05FBACAC0EFB9244D8F11&key=yt8&kind=asr&lang=en HTTP/1.1" 200 None
+2023-11-17 15:13:43,536 DEBUG    [selector_events.py:54] Using selector: SelectSelector
+2023-11-17 15:14:07,942 INFO     [video_service.py:101] Summary file generated

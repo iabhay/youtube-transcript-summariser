@@ -40,25 +40,6 @@ class AdminMap:
         self.uid = uid
         self.adm = AdminController(self.uid)
 
-    def admin_menu(self):
-        admin_dict = {
-            1: self.adm.view_user,
-            2: self.adm.view_all_users,
-            3: self.adm.downgrade_premium_user,
-            4: self.adm.ban_user,
-            5: self.adm.unban_user,
-            6: self.adm.ban_url,
-            7: self.adm.unban_url,
-            8: self.adm.unban_url_for_premium_user,
-            10: self.adm.view_history_of_user,
-            11: self.adm.view_all_history,
-            12: self.adm.view_premium_listing_of_user,
-            13: self.adm.view_all_premium_listings,
-            14: self.adm.show_all_ban_urls,
-            15: self.adm.show_ban_url
-        }
-        return admin_dict
-
     def message_menu(self):
         message_views = {
             1: self.adm.messages_from_premium_users,
@@ -67,3 +48,37 @@ class AdminMap:
             4: self.adm.view_all_messages
         }
         return message_views
+
+    def user_ops_menu(self):
+        admin_user_dict = {
+            1: self.adm.view_user,
+            2: self.adm.view_all_users,
+            3: self.adm.downgrade_premium_user,
+            4: self.adm.ban_user,
+            5: self.adm.unban_user,
+        }
+        return admin_user_dict
+
+    def url_ops_menu(self):
+        admin_url_dict = {
+            1: self.adm.ban_url,
+            2: self.adm.unban_url,
+            3: self.adm.show_all_ban_urls,
+            4: self.adm.show_ban_url
+        }
+        return admin_url_dict
+
+    def premiumlisting_ops_menu(self):
+        admin_premiumlisting_dict = {
+            1: self.adm.view_premium_listing_of_user,
+            2: self.adm.view_all_premium_listings,
+            3: self.adm.unban_url_for_premium_user
+        }
+        return admin_premiumlisting_dict
+
+    def history_ops_menu(self):
+        admin_history_dict = {
+            1: self.adm.view_history_of_user,
+            2: self.adm.view_all_history,
+        }
+        return admin_history_dict
